@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  video.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  image.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  </style>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Dexterous, Low-cost Hybrid Rigid-Soft Hand for Robot Learning">
+  <meta name="keywords" content="Robot Hand, Dexterous Manipuation, Machine Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:site_name" content="LEAP Hand: Dexterous, Low-cost Hybrid Rigid-Soft Hand for Robot Learning" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="LEAP Hand: Dexterous, Low-cost Hybrid Rigid-Soft Hand for Robot Learning" />
+  <meta property="og:description" content="LEAP Hand: Dexterous, Low-cost Hybrid Rigid-Soft Hand for Robot Learning" />
+  <meta property="og:url" content="http://v2.leaphand.com" />
+  <meta property="og:image" content="http://v2.leaphand.com/static/videos/teaser.png" />
+  <!-- <meta property="og:video" content="http://leaphand.com/static/videos/compressed.mp4" /> -->
+
+  <meta property="article:publisher" content="http://v2.leaphand.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Leap Hand: Dexterous, Low-cost Hybrid Rigid-Soft Hand for Robot Learning" />
+  <meta name="twitter:url" content="http://v2.leaphand.com/" />
+  <meta name="twitter:image" content="http://v2.leaphand.com/static/figures/teaser.png"/>
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:player" content="" />
+  <meta name="twitter:player:width" content="640" />
+  <meta name="twitter:player:height" content="360" />
+
+
+  <title>LEAP Hand V2: Dexterous, Low-cost Hybrid Rigid-Soft Hand for Robot Learning</title>
+
+  <link href="./static/css/fonts.googleapis.com_css_family=Google+Sans_Noto+Sans_Castoro.css"
+        rel="stylesheet">
+
+  <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/cdn.jsdelivr.net_gh_jpswalsh_academicons@1_css_academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_css_bootstrap.min.css">
+  <script src="./static/js/isInViewport.min.js"></script>
+  <script src="./static/js/cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_js_bootstrap.bundle.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <style>
+    .nav-item
+    {
+      font-size: 25px;
+      
+    }
+    .navbar-nav .nav-link {
+      margin-right: 7px;
+      margin-left: 7px;
+    }
+    .accordion-button.collapsed {
+    background:#DCDCDC;
+    border: 1px solid #464646; /* Border color and thickness */
+    }
+    .accordion-button:not(.collapsed) {
+    border: 1px solid #747474; /* Border color and thickness */
+    }
+    </style>    
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BCD5FA;">
+    <!-- Container wrapper -->
+    <div class="container">
+        <!-- Collapsible wrapper -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarCenteredExample" aria-controls="navbarCenteredExample" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse justify-content-center" id="navbarCenteredExample">
+
+            <!-- Left links -->
+            <ul class="navbar-nav mb-5 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./">Main Paper</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./parts">Parts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./cad_request">CAD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./assembly">Assembly</a>
+                </li>
+            </ul>
+            <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+            <div class="row">
+                <div class="col"  style="text-align:center;">
+                  <!-- <div class="sketchfab-embed-wrapper"> <iframe title="LEAP Full Assembly Left" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="360" src="https://sketchfab.com/models/67d1215db44541cfb20ec8d87e3c8a27/embed?camera=0"> </iframe> </div> -->
+                </div>
+                <div class="col">
+                  <!-- <div class="sketchfab-embed-wrapper"> <iframe title="LEAP Full Assembly Right" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="360" src="https://sketchfab.com/models/3633c296553b434fb468fce88364f995/embed?camera=0"> </iframe> </div> -->
+                </div>
+              </div>
+              **For the left hand, the only adjustments are mirroring the upper and lower parts of the palm in the STP and using a left-bottom plate to ensure the text is not mirrored.
+              <br>
+              <br>
+
+            <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;"><strong>Prepare 3D printed parts:</strong></h3>    
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        Remove Support Material:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                        <p class="fs-6">
+                            <ol>
+                                <li>PLA support is used during the printing process.</li>
+                                <li>After printing, gently remove the PLA from the TPU using a small cutter or pliers.</li> 
+                                <li>For the four fingers, pull support material from the fingertip toward the MCP base. Avoid pulling top-to-bottom, as it may cause layer separation.</li> 
+                                <li>Clear any remaining support from the tendon hole entry points on especially the palm. Use a small drill bit if needed (internal channels are typically already clear).</li>
+                                <li>Use a small drill bit to clear the M2 motor mounting holes on the palm.</li>
+                            </ol>
+                        </p>
+                        <div class="row">
+                            <div class="col-7">
+                                <figure class="figure">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/finger_support_removal.jpg" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center">Pull the support across the finger in the direction shown to avoid damaging the layers of the finger.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-5">
+                                <figure class="figure">
+                                    <img id="img1" style="width:100%" class="img-fluid" src="./static/assm_img/palm_with_support.jpg" style="display: block;" />
+                                    <img id="img2" style="width:100%; display: none;" class="img-fluid" src="./static/assm_img/palm_support_removed.jpg" />
+                                    <figcaption id="caption" class="figure-caption text-center">
+                                        Palm from the 3D printer
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <script>
+                                const img1 = document.getElementById('img1');
+                                const img2 = document.getElementById('img2');
+                                const caption = document.getElementById('caption');
+
+                                let showingFirst = true;
+
+                                setInterval(() => {
+                                    if (showingFirst) {
+                                        img1.style.display = 'none';
+                                        img2.style.display = 'block';
+                                        caption.textContent = 'Palm with Support Material Removed and holes cleared.';
+                                    } else {
+                                        img1.style.display = 'block';
+                                        img2.style.display = 'none';
+                                        caption.textContent = 'Palm from the 3D printer';
+                                    }
+                                    showingFirst = !showingFirst;
+                                }, 5000); // Switch every 5000ms = 5 seconds
+                            </script>
+                        </div>
+                        <p class="text-success"><em>Tip: </em>Take your time and proceed carefully to avoid damaging the TPU skin!</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                        Prepare Brass Inserts:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                        <div class="accordion-body">
+                       
+                            <div class="row">
+                                <div class="col-8">
+                                     <p>Brass inserts help screws go into the 3D printed plastic more easily and hold securely.  To use them:</p>
+                                    <ol>
+                                        <li>Put a soldering iron tip that fits the insert well.</li>
+                                        <li>Heat the soldering iron to around 240C</li>
+                                        <li>Press the brass insert carefully and steadily into the hole.</li>
+                                    </ol>
+                                    <h4>Palm Top:</h4>
+                                    <ol>
+                                        <li>
+                                            Insert 12x M2.5 6mm brass inserts around the perimeter holes of the palm top.
+                                        </li>
+                                        <li>
+                                            Insert as many M2.5 4mm brass inserts into the top of the palm top to hold your USB board and optional LEAP Power board.
+                                        </li>
+                                    </ol>
+                                    <h4>Palm:</h4>
+                                    <ol>
+                                        <li>
+                                            Optionally, insert three M2.5x4mm brass inserts into the main palm holes along the bottom edges. These screws may not be necessary, depending on how secure you need the palm.
+                                        </li>
+                                    </ol>
+                                    <h4>Wrist Mount:</h4>
+                                    <p>(Do these wrist parts only if you are using the wrist mount)</p>
+                                    <ol>
+                                        <li>
+                                            Insert 4x M2.5 4mm brass inserts into the flat base to hold the USB board.
+                                        </li>
+                                        <li>
+                                            Insert 2x M2.5 4mm brass inserts into the knub next to the arm to hold the lid on.
+                                        </li>
+                                    </ol>
+                                    <h4>Wrist Lid:</h4>
+                                    <ol>
+                                        <li>
+                                            Insert 2x M2.5 4mm brass inserts into the side to hold it in place.
+                                        </li>
+                                    </ol>
+                                    <h4>Fingers</h4>
+                                    <ol>
+                                        <li>
+                                            Insert 2x M2 6mm or 8mm brass inserts into the finger holes on the bottom of each finger.
+                                        </li>
+                                    </ol>
+                                        </div>
+                                        <div class="col-4">
+                                            <figure class="figure">
+                                                <img style="width:100%" class="img-fluid" src="./static/assm_img/brass_insert.jpg" onclick="this.requestFullscreen()"/>
+                                                <figcaption class="figure-caption text-center">Inserting a Brass Insert</figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                        <p class="text-success"><em>Tip:</em>If a few of the inserts don't hold, that's okay—there's some built-in redundancy, so not every single one is required.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            
+            <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;"><strong>Prepare Curl Motors and Tendons</strong></h3>  
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="true" aria-controls="panelsStayOpen-collapseFive">
+                        Attach Pulleys to Motors:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingFive">
+                    <div class="accordion-body">
+                        <p class="fs-6">
+                            <ol>
+                                <li>Make sure the pulley horn printed correctly with the 0.2mm nozzle — it should have a clear jagged pattern that matches the horn design.</li>
+                                <li>Gently spin the pulley teeth onto the motor horn until they begin to engage. It may be too tight to push fully by hand, but should start to line up.</li>
+                                <li>Use a M3 8mm buttonhead screw and screw it in through the pulley into the horn until it cannot easily turn becauase of the pulley.</li>
+                                <li>Place a clamp around your desk, put the motor on top with the pulley facing up, and then carefully push down on the face of the pulley using the clamp.</li>
+                                <li>Repeat clamping and tightening the screw gradually until the pulley sits flush against the motor—be careful that it's flush, but not rubbing.</li>
+                                <br>
+                            </ol>
+                        </p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <figure class="figure">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/pulley_up.jpg" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center">Bottom View of MCP Side Motor, note the double dash on the side of the horn marked in white for visibility.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-4">
+                                <figure class="figure">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/motor_clamped.jpg" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center">Top View of MCP Side motor with the spacer inserted.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-4">
+                                <figure class="figure">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/pulley_on.jpg" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center">Top View of MCP Side motor with the spacer screwed down.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                        Setup Tendon:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+                    <div class="accordion-body">
+                        <p class="fs-6">
+                            <ol>                               
+                                <li>
+                                    Unspool some of the fishing line, roughly 2x the length of the finger, and cut it.  
+                                </li>
+                                <li>
+                                    Tie a normal knot on one end. Put that knotted end through the small hole in the pulley and pull it tight so the knot sits securely inside the center of it.
+                                </li>
+                            </ol>
+                        </p>
+                        <div class="row">
+                            <div class="col text-center">
+                                <figure class="figure">
+                                    <img style="width:80%" class="img-fluid" src="./static/assm_img/tendon_setup.jpg" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center">Tied tendon in the pulley.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div> 
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingNinty">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNinty" aria-expanded="false" aria-controls="panelsStayOpen-collapseNinty">
+                        Attach Curl Motors to Palm:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseNinty" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingNinty">
+                    <div class="accordion-body">
+                        <ol> 
+                            <li>Find an open slot, thread the tendon through the corresponding hole in the palm, and pull it all the way through the palm and through the base MCP joint.</li>
+                            <li>Carefully place the motor into the corresponding slot, making sure not to pinch the tendon.</li>
+                            <li>Secure each motor using 3x M4 20mm screws and 3x M4 nuts. The head of the screw should be facing outwards so it is easy to tighten.</li>
+                            (Note: only one screw can fit on the cable side—be careful not to crush the cable.)
+                        </ol>
+                        Alternate the orientation of the motors as in the photos below:
+                        <div class="row">
+                            <div class="col">
+                                <img style="width:100%" class="img-fluid" src="./static/assm_img/two_curl_motors.jpg" onclick="this.requestFullscreen()"/>
+                            </div>
+                            <div class="col">
+                                <img style="width:100%" class="img-fluid" src="./static/assm_img/four_curl_motors.jpg" onclick="this.requestFullscreen()"/>
+                            </div>
+                            <div class="col">
+                                <img style="width:100%" class="img-fluid" src="./static/assm_img/front_curl_motors.jpg" onclick="this.requestFullscreen()"/>
+                            </div>
+                        </div>
+                        <br>                
+                    </div>
+                </div>
+
+            </div>
+            <br><br>
+            <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;"><strong>Attaching MCP Side Motors to Palm</strong></h3>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwelve">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwelve" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwelve">
+                        Powering up the Motor:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwelve" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwelve">
+                    <div class="accordion-body">
+                            <p>We must power up the MCP side motor to figure out its home pose.</p>      
+                            I recommend you temporarily wire the motor to the USB board and the optional LEAP Power board as shown.  Then you can set the motor to the home position of 2048 either using our provided script or the Feetech GUI.            
+                            <div class="row">
+                                <div class="col-7">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/program_motor.jpg" onclick="this.requestFullscreen()"/>               
+                                </div>  
+                                <div class="col-5">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/gui.PNG" onclick="this.requestFullscreen()"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingThirteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThirteen" aria-expanded="false" aria-controls="panelsStayOpen-collapseThirteen">
+                        Mounting Horn onto Motor and Palm:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThirteen">
+                    <div class="accordion-body">
+                        <h4>
+
+                        </h4>
+                        <p class="fs-6">
+                            <h4>Attach Horn to Motor </h4>
+                                <ol>
+                                    <li>While the motor is powered, align the horn so that its holes are roughly aligned with the top, bottom, left, and right of the motor. Unfortunately, it won't be perfectly precise, but this will be corrected later in software.</li>
+                                    <li>Press the horn down onto the servo and use the Feetech supplied M2.3x5mm phillips head screw to tighten the horn.</li>
+                                </ol>
+                            <h4>Attach Horn to Palm</h4>
+                                <ol>
+                                    <li>Use four M2x6mm screws to fasten the MCP-side motor to the underside of the palm finger joint. You may unplug the motor if needed, but be careful not to rotate the horn.</li>
+                                </ol>
+                        </p>
+                        <div class="row">
+                            <div class="col-4">
+                                <img style="width:100%" class="img-fluid" src="./static/assm_img/motor_horn_mount.jpg" onclick="this.requestFullscreen()"/>
+                            </div>
+                            <div class="col-4">
+                                <img style="width:100%" class="img-fluid" src="./static/assm_img/mcp_side_motors_top.jpg" onclick="this.requestFullscreen()"/>
+                            </div>       
+                            <div class="col-4">
+                                <img style="width:100%" class="img-fluid" src="./static/assm_img/mcp_side_motors_bottom.jpg" onclick="this.requestFullscreen()"/>
+                            </div>                        
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;"><strong>Fingers</strong></h3>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingEleven">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEleven" aria-expanded="true" aria-controls="panelsStayOpen-collapseEleven">
+                        Attaching Fingers:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseEleven" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingEleven">
+                    <div class="accordion-body">
+                        <p class="fs-6">
+                            <h4>Route Tendon Through Finger</h4>
+                                <ol>
+                                    <li>Locate the three channels within the finger and carefully guide the tendon through each channel one at a time.</li>
+                                    <li>Pull the tendon to remove slack, leaving only two to three wraps around the pulley. Tie a regular knot near the fingertip to secure it, then trim any excess for a clean finish.</li>
+                                </ol>
+                            <h4>Attach Finger to Motor</h4>
+                                <ol>
+                                    <li>Use two M2x8mm screws to fasten to the underside of the finger and the side plate to MCP-side motor.</li>
+                                </ol>
+                        </p>
+                        <strong>Repeat the MCP side motor and finger attachment processes for the other three remaining fingers.  For the thumb you will only have two channels instead of three to guide the tendon through.</strong>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <figure class="figure">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/finger_assembly_front.jpg" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center">Bottom View of MCP Side Motor, note the double dash on the side of the horn marked in white for visibility.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-6">
+                                <figure class="figure">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/finger_assembly_back.jpg" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center">Top View of MCP Side motor with the spacer inserted.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            <br><br>
+            <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;"><strong>Mounting and Electronics</strong></h3>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFourteen">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFourteen" aria-expanded="true" aria-controls="panelsStayOpen-collapseFourteen">
+                        Programming Motor IDs:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFourteen" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingFourteen">
+                        <div class="accordion-body">
+                            One by one, connect the motors to the USB board with 7.4v and a USB cable similar to how you powered up the MCP side motors in the earlier step.<br>
+              You can either use the GUI that Feetech provides or my python ID script called set_motor_id.py. <br>
+                            Follow the IDs below:
+                            <div class="row">
+                                <table class="table table-striped" style="table-layout: fixed; width: 100%; text-align: center;">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">MCP Side</th>
+                                    <th scope="col">Curl</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Index</th>
+                                    <td><b>0</b></td>
+                                    <td><b>1</b></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Middle</th>
+                                    <td><b>2</b></td>
+                                    <td><b>3</b></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Ring</th>
+                                    <td><b>4</b></td>
+                                    <td><b>5</b></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Thumb</th>
+                                    <td><b>6</b></td>
+                                    <td><b>7</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingonehundred">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseonehundred" aria-expanded="false" aria-controls="panelsStayOpen-collapseonehundred">
+                        Attaching Palm Lower:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseonehundred" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingonehundred">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-7">
+                                <p class="fs-6">
+                                    <ol>
+                                    <li>There are 8 open holes around the perimeter of the palm.</li>
+                                    <li>Select 4 evenly spaced holes to attach the lower cover using M2.5 8mm screws.</li>
+                                    <li>Leave the remaining holes unscrewed so they can be used later for attaching the arm mounts.</li>
+                                    <li>Tighten the screws gently—just enough to hold the cover in place and allow the components to align naturally.</li>
+                                    </ol>
+                                </p>
+                            </div>
+                            <div class="col-5">
+                                <figure class="figure">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/palm_upper.jpg" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center">Ziptie the MCP side motor cables to the front of the fingers.  The cables should be IN FRONT of the logo bar and can be ziptied to it. </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingSeventeen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeventeen" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeventeen">
+                        Wiring the Motors Together:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeventeen">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-7">
+                                <p>
+                                    Feetech motors are bus-based servos, meaning each motor has a unique ID and they all share a common wiring system (the bus). The connectors on the back of the motors are identical, and the motors are interconnected via these connectors.
+                                    You have two options here:
+                                </p>  
+                                    <ol>
+                                    <li>Use the LEAP Power board.  This simplifies the wiring and ensures consistency.  Connect all of the motors to the board and the power and then connect this to the USB board.</li>
+                                    <li>Use the splitters provided with the motors, chain them together and wrap the cables into the respective mount of the hand which you will attach below.</li>
+                                    <li><strong>I recommend having your chosen mount on hand during the wiring process. This ensures you can properly route and tuck the cables into their designated spots before fully securing the mount to the hand.</strong></li>
+                                    </ol>
+                                <br> 
+                            </div>
+                            <div class="col-5">
+                                <figure class="figure">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/wiring.jpg" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center">Ziptie the MCP side motor cables to the front of the fingers.  The cables should be IN FRONT of the logo bar and can be ziptied to it. </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFifteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFifteen" aria-expanded="false" aria-controls="panelsStayOpen-collapseFifteen">
+                        Arm Mounts:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFifteen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFifteen">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col">
+                                <h4>Top Mount:</h4>
+                                <ol>
+                                    <li>There are two parts, a TODO top hat and a Use M6 screws to screw the top mount into the </li>
+
+                                </ol>
+                                    <br>
+                                
+                                <h4>Wrist Mount:</h4>                   
+                                <ol>
+                                </ol>
+                                <p class="text-success"><em>Tip: </em>While the wrist mount is anatomically correct, the top mount is better for many 6DOF arms designed for grippers.</p>   
+                            </div>
+                            <div class="col">
+                                <figure class="figure">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/mount.JPG" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center">The Four Fingers Bottom Mount is attached using M3 screws to the hand and M6 screws to the arm.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <br>                
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingEighteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEighteen" aria-expanded="false" aria-controls="panelsStayOpen-collapseEighteen">
+                        Finishing up!
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseEighteen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEighteen">
+                    <div class="accordion-body">
+                        <p>
+                            <strong>Congratulations on completing the assembly of the hand!</strong><br><br>
+                            When powering on the hand for the first time and running the tensioning script, ensure that the tendons are properly wrapped and seated inside the pulley grooves.
+                            For more details, refer to the LEAP Hand v2 Software API.
+                        </p>                          
+                        <p class="text-success"><em>Tip:</em> If you are having trouble with the fingers curling, check that the tendons are properly on the pulleys and the knots are tied tightly.</p>   
+                    </div>
+                </div>
+            </div>
+    </div>
+  </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="large-font bottom_buttons" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+      <br />
+      <!-- <p>Dexbotics LLC.</p> -->
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  var mainLoopId = setInterval(function(){
+    $('video').not('#teaser').each(function(){
+  if ($(this).is(":in-viewport")) {
+      $(this)[0].play();
+  } else {
+      $(this)[0].pause();
+  }
+  })
+},200);
+
+
+</script>  
+</body>
+</html>
