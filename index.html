@@ -49,6 +49,7 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
   <script src="./static/js/isInViewport.min.js"></script>
+  <script src="./static/js/cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_js_bootstrap.bundle.min.js"></script>
 
   <meta property="og:image:width" content="1600" />
   <meta property="og:image:height" content="900" />
@@ -68,8 +69,16 @@
 
     .navbar-nav .nav-link {
       margin-right: 7px;
-      margin-left: 7px;
+      margin-left: 7p
+      x;
     }
+
+.sketchfab-embed-wrapper,
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
   </style>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BCD5FA;">
     <!-- Container wrapper -->
@@ -96,6 +105,18 @@
           <li class="nav-item">
             <a class="nav-link" href="./assembly">Assembly</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./purchase">Purchase</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Software
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://github.com/leap-hand/LEAP_Hand_V2_API" target="_blank">API</a>
+              </li>
+            </ul>
+          </li>
         </ul>
         <!-- Left links -->
       </div>
@@ -103,24 +124,10 @@
     </div>
     <!-- Container wrapper -->
   </nav>
-  <br><br>
-  <div class="columns is-centered has-text-centered">
-        <div class="column is-two-thirds">
-          <div class="row">
-            <div class="alert alert-success text-center" role="alert">
-              Please come by our demo and enjoy a preview of our robot hand in action!  
-              
-              We will provide full CAD files and videos at the conclusion of the conference, thanks!
-            </div>
-          </div>
-        </div>
-      </div>
   <section class="hero">
     <div class="hero-body">
       <div class="container">
-        <div class="columns is-centered">
-          
-          
+        <div class="columns is-centered">       
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Demonstrating LEAP Hand v2: </h1>
             <h2 class="title is-34 publication-title">Low-Cost, Easy-to-Assemble, High-Performance Hand for Robot Learning
@@ -157,17 +164,16 @@
                 <div class="content has-text-justified">
                   <p style="font-size: 20px">
 Replicating human-like dexterity in robotic hands has been a long-standing challenge in robotics. Recently, with the rise of robot learning and humanoids, the demand for dexterous robot hands to be reliable, affordable, and easy to reproduce has grown significantly. To address these needs, we present LEAP Hand v2, a $200 8-DOF highly dexterous robotic hand designed for robot learning research. It is strong yet compliant, using a hybrid rigid-soft structure that is very durable. Its universal dexterous MCP joint provides exceptional finger mobility, enabling a variety of different grasps. The parts are all 3D printed and can be assembled very easily in under two hours using our instructions. Importantly, we offer a suite of advanced opensource software tools to support robot learning research. This includes human video retargeting code from MANO and Vision Pro, motion capture teleoperation code using the Manus Glove, and a URDF with simulation examples for various simulation engines. We will showcase LEAP Hand v2—designed specifically for this demonstration—alongside our previous robot hands with real robot interactive demos. Following our successful demos at RSS 2023 and 2024, we will again offer an engaging opportunity for attendees to get hands-on experience and information about the accessibility of low-cost, open-source robotic hands.</div>
+
+                  <!-- <div class="alert alert-success text-center" role="alert">
+                    We offer grants that provide free robot hands for research projects! Visit our Purchase Page for more information.
+                  </div> -->
+                </div>
               </div>
             </div>
-          </div>
         </div>
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <video class="center" controls playsinline autoplay loop muted
-                src="./static/videos/teleop_gloves.mp4" width="100%"
-                style="border-radius:10px; width: 55%;"></video>
-                <br>
-                <strong>Come and telop this at our demo!!!</strong>
             <!-- <h4 class="title is-34 publication-title"><a href="https://bidex-teleop.github.io/">Learning from Motion Capture Gloves</a></h4>
             <div class="row">
               <div class="col">
@@ -194,7 +200,7 @@ Replicating human-like dexterity in robotic hands has been a long-standing chall
             </div>
             <br><br> -->
 
-            <!-- <h4 class="title is-34 publication-title"><a href="https://bidex-teleop.github.io/">Accurate Teleoperation with Gloves</a></h4>
+            <h4 class="title is-34 publication-title"><a href="https://bidex-teleop.github.io/">Accurate Teleoperation with Gloves</a></h4>
             <div class="row">
               <div class="col">
                   <video id="t_3" class="center" playsinline controls loop muted src="./static/videos/video_segments/dining_bimanual_place.mp4" width="100%" preload="metadata"
@@ -212,13 +218,12 @@ Replicating human-like dexterity in robotic hands has been a long-standing chall
                     <center><h5>Grape Pluck</h5></center>
               </div>
             </div>
-            <h5>*I highly recommend Manus Gloves to take full advantage of the high DOF of LEAP V2 Adv.</h5>
             <br>
             <h3 class="title is-3" style="text-align: center;">
               <bold>Hybrid Rigid-Soft Hand</bold>
-            </h3> -->
+            </h3>
 
-            <!-- <div class="row">
+            <div class="row">
               <div class="col">
                 <video class="center" playsinline autoplay loop muted
                   src="./static/videos/video_segments/durability.mp4" width="100%"
@@ -229,17 +234,38 @@ Replicating human-like dexterity in robotic hands has been a long-standing chall
               </div>
               <div class="col">
                 <video class="center" playsinline autoplay loop muted
-                  src="./static/videos/video_segments/leapv2_forward.mp4" width="100%"
-                  style="margin: -4px; border: 4px; border-radius:10px;"></video>
+                  src="./static/videos/video_segments/twist.mp4" width="100%"
+                  style="margin: -4px; border: 8px; border-radius:10px;"></video>
               </div>
             </div>
             <br>
             <h5 style="text-align: center; padding-bottom: 10px;"><a>The hybrid rigid-soft design provides both strength and durable compliance. <br>
-              The MCP joints have a strong rigid structure, while the PIP and DIP joints are coupled via a single tendon.<br> 
-              Each finger is multi-material 3D printed with TPU and PLA.</a>
+              The interior of the fingers have a strong rigid structure, while the soft joints are actuated via a single tendon.<br> 
+              Each finger is easily multi-material 3D printed with TPU and PLA.</a>
             <br><br>
 
 
+            <h3 class="title is-3" style="text-align: center;">
+              <bold>Under-actuated Curling</bold>
+            </h3>         
+            <div class="row">
+              <div class="col">
+                    <video class="center" playsinline autoplay loop muted
+                  src="./static/videos/video_segments/underactuation.mp4" width="85%"
+                  style="margin: -4px; border: 8px; border-radius:10px;"></video>
+                  <h5 style="text-align: center; padding-bottom: 10px;">The MCP bends most, followed by the PIP and DIP.<br> Softer rubber at earlier joints makes them actuate more.</h5>
+              </div>
+              <div class="col">
+                    <video class="center" playsinline autoplay loop muted
+                  src="./static/videos/video_segments/pinch.mp4" width="85%"
+                  style="margin: -4px; border: 8px; border-radius:10px;"></video>
+                   <h5 style="text-align: center; padding-bottom: 10px;">Pinches can be performed between the thumb and <br>all three under-actuated fingers.</h5>
+              </div>
+            </div>
+            <br>
+            <br>
+
+            
             <h3 class="title is-3" style="text-align: center;">
               <bold>Dexterous MCP Side Joint</bold>
             </h3>
@@ -257,80 +283,85 @@ Replicating human-like dexterity in robotic hands has been a long-standing chall
               </div>
               <div class="col">
                 <video class="center" playsinline autoplay loop muted
-                  src="./static/videos/video_segments/leapv2_side_side.mp4" width="100%"
+                  src="./static/videos/video_segments/mcp_side_v2.mp4" width="100%"
                   style="margin: -4px; border: 8px; border-radius:10px; border-style: solid; border-color: green;"></video>
               </div>
             </div>
             <br>
             <h5 style="text-align: center; padding-bottom: 10px;">The signature LEAP Hand MCP joint enables incredible dexterity side to side.  In total LEAP Hand v2 has 16 DOF with 8 powered motors.  
             </h5>
-            <br><br>  
-            <h3 class="title is-3" style="text-align: center;">
-              <bold>Under-actuated Curling</bold>
-            </h3>         
-            <div class="row">
-              <div class="col-8">
-                    <img src="./static/figures/assembly_3D_printer.PNG" alt="Size Comparison" width="98%">
-              </div>
-              <div class="col-4">
-                    <img src="./static/assm_img/mcp_forward_4_fingers.JPG" alt="Mounting" width="98%" style="margin: -4px; border: 4px; border-radius:10px;">
-              </div>
-            </div>
-            <br>
-            <h5 style="text-align: center; padding-bottom: 10px;"> For a firm grasp, MCP should move most, then PIP, and DIP the least. <br>Joints with more actuation have lower-density rubber material to move more from the applied tendon force.
-</h5>
-            <br><br>
+            <br>  
+
             <h3 class="title is-3" style="text-align: center;">
               <bold>One Piece Palm and Fingers</bold>
             </h3>         
             <div class="row">
-              <div class="col-8">
-                    <img src="./static/figures/assembly_3D_printer.PNG" alt="Size Comparison" width="98%">
+              <div class="col-4">
+                <strong>Flat Fingers Top Mount</strong>
+                <div class="sketchfab-embed-wrapper">
+                  <iframe
+                    title="LEAP Full Assembly Right"
+                    frameborder="0"
+                    allowfullscreen
+                    mozallowfullscreen="true"
+                    webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    xr-spatial-tracking
+                    execution-while-out-of-viewport
+                    execution-while-not-rendered
+                    web-share
+                    src="https://sketchfab.com/models/63dadf6388f6478cb8b1e4ddbdd2303d/embed?camera=0">
+                  </iframe>
+                </div>               
               </div>
               <div class="col-4">
-                    <img src="./static/assm_img/mcp_forward_4_fingers.JPG" alt="Mounting" width="98%" style="margin: -4px; border: 4px; border-radius:10px;">
-              </div>
-            </div>
-            <br>
-            <h5 style="text-align: center; padding-bottom: 10px;">The palm and fingers come as one piece out of the 3D printer, which makes assembly very easy.  
-              The fingers are mounted to the palm with a few screws and can be easily replaced if damaged.</h5>
-            <br><br>
-            <h3 class="title is-3" style="text-align: center;">
-              <bold>Cost and Assembly</bold>
-            </h3>         
-            <div class="row">
-              <div class="col-8">
-                    <img src="./static/figures/assembly_3D_printer.PNG" alt="Size Comparison" width="98%">
+                <strong>Round Fingers Wrist Mount</strong>
+                <div class="sketchfab-embed-wrapper">
+                  <iframe
+                    title="LEAP Full Assembly Right"
+                    frameborder="0"
+                    allowfullscreen
+                    mozallowfullscreen="true"
+                    webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    xr-spatial-tracking
+                    execution-while-out-of-viewport
+                    execution-while-not-rendered
+                    web-share
+                    src="https://sketchfab.com/models/893bdbb4d8e542678e7dbde685f65237/embed?camera=0">
+                  </iframe>
+                </div>
               </div>
               <div class="col-4">
-                    <img src="./static/assm_img/mcp_forward_4_fingers.JPG" alt="Mounting" width="98%" style="margin: -4px; border: 4px; border-radius:10px;">
+                <br><br>
+                    <img src="./static/figures/v2_anatomy.png" alt="Mounting" width="98%" style="margin: -4px; border: 4px; border-radius:10px;">
               </div>
             </div>
-            <br>
-            <h5 style="text-align: center; padding-bottom: 10px;">LEAP V2 can be built within a couple of hours using our full instructions and is easy to repair.
-
             <br><br>
+            <h5 style="text-align: center; padding-bottom: 10px;">The palm and fingers are each single 3D-printed pieces making fabrication, assembly and customization extremely easy!</h5>
+            <br>
 
             <h3 class="title is-3" style="text-align: center;">
-              <bold>Human-like Kinematics</bold>
+              <bold>Human-like Kinematics and Weight</bold>
             </h3>
 
             <div class="row">
-              <div class="col-8">
-                    <img src="./static/figures/size_comparison.PNG" alt="Size Comparison" width="98%">
+              <div class="col-6">
+                    <img src="./static/figures/size_comparison.jpg" alt="Size Comparison" width="98%" style="margin: -4px; border: 4px; border-radius:10px;">
               </div>
-              <div class="col-4">
-                    <img src="./static/figures/mounted.jpg" alt="Mounting" width="98%" style="margin: -4px; border: 4px; border-radius:10px;">
+              <div class="col-6">
+                    <!-- <img src="./static/figures/mounted.jpg" alt="Mounting" width="98%" style="margin: -4px; border: 4px; border-radius:10px;">
+                    (Show human and robot holding tennis ball, both wrist mount and top mount) -->
               </div>
             </div>
             <br>
-            <h5 style="text-align: center; padding-bottom: 10px;">LEAP Hand v2 has similar size of palm and kinematics to a human-hand.  It can mount on any robot arm or most humanoids.
+            <h5 style="text-align: center; padding-bottom: 10px;">LEAP Hand v2 is similar in size to a human-hand.  It can mount gripper-style or wrist-style to many different robot arms.
             </h5>
             <br><br>
           </div>
         </div>
       </div>
-    </div> -->
+    </div> 
   </section>
 
   <footer class="footer">

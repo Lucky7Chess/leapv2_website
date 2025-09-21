@@ -31,10 +31,10 @@
     <meta name="twitter:player:height" content="360" />
   
   
-    <title>LEAP Hand V2: Dexterous, Low-cost Hybrid Rigid-Soft Hand for Robot Learning</title>
+  <title>Demonstrating LEAP Hand v2: Low-Cost, Easy-to-Assemble, High-Performance Hand for Robot Learning</title>
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
+    <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
     <link rel="stylesheet" href="./static/css/bulma.min.css">
     <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -43,12 +43,15 @@
     <link rel="stylesheet" href="./static/css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./static/js/cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_js_bootstrap.bundle.min.js"></script>
     <script defer src="./static/js/fontawesome.all.min.js"></script>
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
     <script src="./static/js/isInViewport.min.js"></script>
+
+
+
 
     <meta property="og:image:width" content="1600" />
     <meta property="og:image:height" content="900" />
@@ -69,6 +72,13 @@
             margin-right: 7px;
             margin-left: 7px;
         }
+        .accordion-button.collapsed {
+    background:#DCDCDC;
+    border: 1px solid #464646; /* Border color and thickness */
+    }
+    .accordion-button:not(.collapsed) {
+    border: 1px solid #747474; /* Border color and thickness */
+    }
     </style>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BCD5FA;">
         <!-- Container wrapper -->
@@ -83,21 +93,33 @@
             <div class="navbar-collapse justify-content-center" id="navbarCenteredExample">
 
                 <!-- Left links -->
-                <ul class="navbar-nav mb-5 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./">Main Paper</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./parts">Parts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./cad_request">CAD</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./assembly">Assembly</a>
-                    </li>
-                </ul>
-                <!-- Left links -->
+        <ul class="navbar-nav mb-5 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./">Main Paper</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./parts">Parts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./cad_request">CAD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./assembly">Assembly</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./purchase">Purchase</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Software
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://github.com/leap-hand/LEAP_Hand_V2_API" target="_blank">API</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Left links -->
             </div>
             <!-- Collapsible wrapper -->
         </div>
@@ -145,7 +167,6 @@
                     <h3 class="title is-4" style="text-align: center; padding-bottom: 10px;">
                         <bold>Feetech Components</bold>
                     </h3>
-                    <br>
                     <tr>
                         <td>
                             <div class="row">
@@ -195,28 +216,50 @@
                                             <td>1</td>
                                             <td>$33.00</td>
                                             <td>$33.00</td>
-                                        </tr>                                        
+                                        </tr> 
+                                        <tr>
+                                            <td><img style="width:300px;" class="img-fluid"
+                                                    src="./static/part_img/leap_power.jpg" />
+                                            </td>
+                                            <td>
+                                            Using the <a href="https://github.com/leap-hand/LEAP_Power" target="_blank">LEAP Power Hub</a> is optional. <br>It makes wiring cleaner than the <br> small Feetech splitters from the motors. <br> See the <a href="https://github.com/leap-hand/LEAP_Power" target="_blank">LEAP Power Hub page</a> for details.</td>
+                                            <td>1</td>
+                                            <td>$19.00</td>
+                                            <td>$19.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img style="width:300px;" class="img-fluid"
+                                                    src="./static/part_img/xt30.jpg" /></td>
+                                            <td><a href="https://a.co/d/09CXspB" style="font-weight:bold">XT30
+                                                    Pigtail</a><br>
+                                            </td> <br>
+                                            <td>1 </td>
+                                            <td>$9.00</td>
+                                            <td>$9.00</td>
+                                        </tr>                                       
                                     </tbody>
                                 </table>
                             </div>
                         </td>
                     </tr>
-                    <h5 class="title is-4" style="text-align: center; padding-bottom: 10px;">Misc. Parts</h5>
+                    <h5 class="title is-4" style="text-align: center; padding-bottom: 0px;">Misc. Parts</h5>
+                    <h6 style="text-align: center;">Screw counts are approximate and may differ slightly with alternative mounting methods. <br> I suggest getting the variety packs, as they include some extras.</h6>
+                    
                     <tr>
                         <td>
                             <div class="row">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th data-width="200">Name</th>
-                                            <th data-width="100">Quantity</th>
-                                            <th data-width="400">Cost (ea.)</th>
-                                            <th data-width="100">Total</th>
+                                            <th style="width: 40%;">Name</th>
+                                            <th style="width: 20%;">Quantity</th>
+                                            <th style="width: 20%;">Cost (ea.)</th>
+                                            <th style="width: 20%;">Total</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><a href="https://a.co/d/eFoiS2e" style="font-weight:bold">Berkley Trilene Big Game Monofilament Fishing Line</a>
+                                            <td><a href="https://a.co/d/21i6Xkd" style="font-weight:bold">Berkley Trilene Big Game Monofilament Fishing Line</a>
                                                 <br>100lb, Clear, Mono Leader, 0.99 mm Diameter
                                             </td>
                                             <td>1</td>
@@ -230,7 +273,7 @@
                                             <td>$24.99</td>
                                         </tr>
                                         <tr>
-                                            <td><a href="https://a.co/d/cbVsHUl" style="font-weight:bold">Polymaker Polydissolve PLA</a></td>
+                                            <td><a href="https://a.co/d/cbVsHUl" style="font-weight:bold">Polymaker Polydissolve PVA</a></td>
                                             <td>1</td>
                                             <td>$59.99</td>
                                             <td>$59.99</td>
@@ -243,32 +286,78 @@
                                             <td>$54.90</td>
                                         </tr>
                                         <tr>
-                                            <td><a href="https://a.co/d/iw41OXy" style="font-weight:bold">M3 22mm</a></td>
+                                            <td><a href="https://a.co/d/0dFbv4V" style="font-weight:bold">M2 Variety</a> (16x M2x6, 8x M2x8)</td>
+                                            <td>1</td>
+                                            <td>$7.99</td>
+                                            <td>$7.99 </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://a.co/d/0oW0FdD" style="font-weight:bold">M2.5 750pcs Variety</a> M2.5 6mm, M2.5 8mm...</td>
+                                            <td>1</td>
+                                            <td>$7.98 (variety)</td>
+                                            <td>$7.98 </td>
+                                        <tr>
+                                            <td><a href="https://a.co/d/944QbHO" style="font-weight:bold">M4 20mm</a> (12x M4 20mm)</td>
+                                            <td>1</td>
+                                            <td>$7.96</td>
+                                            <td>$7.96</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://a.co/d/59Q7j5c" style="font-weight:bold">M4 Nuts</a> (12x M4 Nuts)</td>
+                                            <td>1</td>
+                                            <td>$5.99</td>
+                                            <td>$5.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://a.co/d/3HHG3hq" style="font-weight:bold">M2.5x6mm(length)x4mm(diameter) Brass Insert</a></td>
+                                            <td>1</td>
+                                            <td>$6.79</td>
+                                            <td>$6.79 </td>
+                                        </tr>  
+                                        <tr>
+                                            <td><a href="https://a.co/d/4wsKJ0F" style="font-weight:bold">M2.5x4mm(length)x3.5mm(diameter) Brass Insert</a></td>
                                             <td>1</td>
                                             <td>$8.99</td>
                                             <td>$8.99 </td>
                                         </tr>
                                         <tr>
-                                            <td><a href="https://a.co/d/eFoiS2e" style="font-weight:bold">M3 6mm 3D
-                                                    printer Inserts</a></td>
-                                            <td>5</td>
-                                            <td>$19.00 (variety)</td>
-                                            <td>$19.00 </td>
-                                        </tr>                                      
+                                            <td><a href="https://a.co/d/f1DUJeY" style="font-weight:bold">M2x6mm(length)x3.5mm(diameter) Brass Insert</a></td>
+                                            <td>1</td>
+                                            <td>$7.99</td>
+                                            <td>$7.99 </td>
+                                        </tr>
                                         <tr>
-                                            <td><a href="https://a.co/d/gWQEECW" style="font-weight:bold"> Power Cable AC <br>(Change for
-                                                    your
-                                                    Country)</a></td>
+                                            <td><a href="https://a.co/d/09xbBcB" style="font-weight:bold">M3 Buttonhead</a> (4x M3 8mm)</td>
+                                            <td>1</td>
+                                            <td>$9.99 (variety)</td>
+                                            <td>$9.99 </td>
+                                        </tr>  
+
+
+                                        <tr>
+                                            <td><a href="https://a.co/d/51iOWQZ" style="font-weight:bold">M3 Variety</a> (<a href="https://i2rt.com/products/yam-manipulator">YAM</a>/<a href="https://global.agilex.ai/products/piper">Piper</a> Mount)</td>
+                                            <td>1</td>
+                                            <td>$6.99 (variety)</td>
+                                            <td>$6.99 </td>
+                                        </tr>  
+                                        <tr>
+                                            <td><a href="https://a.co/d/9ODZvlT" style="font-weight:bold">M6 Variety</a> xArm/Franka/UR5 Mount</td>
+                                            <td>1</td>
+                                            <td>$9.99 (variety)</td>
+                                            <td>$9.99 </td>
+                                        </tr>                                                                          
+                                        <tr>
+                                            <td><a href="https://a.co/d/gWQEECW" style="font-weight:bold">Power Cable AC <br>(Change for your Country)</a></td>
                                             <td>1</td>
                                             <td>$7.00</td>
                                             <td>$7.00</td>
                                         </tr>
                                         <tr>
-                                            <td><a href="https://a.co/d/1zPwbBV" style="font-weight:bold">16 AWG Cable</a></td>
+                                            <td><a href="https://a.co/d/1zPwbBV" style="font-weight:bold">14 AWG Cable</a></td>
                                             <td>1</td>
                                             <td>$9.99</td>
                                             <td>$9.99</td>
-                                        </tr>
+                                        </tr>                                 
                                     </tbody>
                                 </table>
                                 <div class="row">
@@ -277,18 +366,18 @@
                                             <div class="list-group-item  flex-column align-items-start">
                                                 <div class="d-flex w-100 justify-content-between">
                                                     <h5 class="mb-1">Total Cost (1 Hand):</h5>
-                                                    <small class="text-muted">As of Dec 2024</small>
+                                                    <small class="text-muted">As of August 2025</small>
                                                 </div>
                                                 <p class="mb-1 fs-6">Feetech Parts: $221.95</p>
-                                                <p class="mb-1 fs-6">Other Parts: TODOTODO $266.63</p>
-                                                <h5 class="text-muted">You can make many hands with the "Other Parts"</h5>
+                                                <p class="mb-1 fs-6">Other Parts: $251.53</p>
+                                                <small class="text-muted">You can make many hands with the "Other Parts"</small>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="list-group">
                                             <div class="list-group-item flex-column align-items-start">
-                                                <p class="mb-1 fs-6">If you prefer, I also have the 3D printed parts kits (<$100) or fully assembled hands in stock (<$500)  </p>
+                                                <p class="mb-1 fs-6">If you prefer, I also have limited supply of 3D printed parts kits ($100) or fully assembled hands in stock (~$500)  </p><div style="height: 2em;"></div>
                                                 <small class="text-muted">Contact me at contact@leaphand.com</small>
                                             </div>
                                         </div>
@@ -302,23 +391,28 @@
                           <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;">
                             <bold>Tools Required</bold>
                           </h3>
+                        <div class="text-center">
+                            <div class="alert alert-success text-center d-inline-block mx-auto" role="alert">
+                                If you prefer not to print the parts yourself, you can purchase a set of fingers and palm—just send me an email.
+                                <br>
+                                Currently, I only provide print settings for the J1s. However, the Prusa XL with dual nozzles may also work.<br>
+                                The single-nozzle Bambus are not suitable, as the AMS cannot switch TPU. The dual-nozzle Bambu also struggles to print soft enough TPU.
+                            </div>
+                        </div>                  
                           <div class="row">
                             <table class="table table-striped">
                               <thead>
                                 <tr>
-                                  <th data-width="200">Name</th>
-                                  <th data-width="100">Quantity</th>
-                                  <th data-width="400">Cost (ea.)</th>
-                                  <th data-width="100">Total</th>
+                                    <th style="width: 40%;">Name</th>
+                                    <th style="width: 20%;">Quantity</th>
+                                    <th style="width: 20%;">Cost (ea.)</th>
+                                    <th style="width: 20%;">Total</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
                                     <td><a href="https://www.snapmaker.com/en-US/j1s-idex-3d-printer"
                                         style="font-weight:bold">Snapmaker J1S</a> <br>
-                                            We can send you fingers instead if you don't want to print them.  Email me.<br>
-                                            You cannot use a single nozzle Bambu, as the AMS cannot switch TPU.  <br>
-                                            I only provide settings for J1s, but Prusa XL with two nozzles is theoretically possible.
                                         </td>
                                     <td>1</td>
                                     <td>$899.99</td>

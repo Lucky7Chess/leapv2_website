@@ -42,25 +42,25 @@
   <meta name="twitter:player:height" content="360" />
 
 
-  <title>LEAP Hand V2: Dexterous, Low-cost Hybrid Rigid-Soft Hand for Robot Learning</title>
+  <title>Demonstrating LEAP Hand v2: Low-Cost, Easy-to-Assemble, High-Performance Hand for Robot Learning</title>
 
-  <link href="./static/css/fonts.googleapis.com_css_family=Google+Sans_Noto+Sans_Castoro.css"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="./static/js/cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_js_bootstrap.bundle.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script src="./static/js/isInViewport.min.js"></script>
 
-  <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="./static/css/cdn.jsdelivr.net_gh_jpswalsh_academicons@1_css_academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="stylesheet" href="./static/css/cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_css_bootstrap.min.css">
-  <script src="./static/js/isInViewport.min.js"></script>
-  <script src="./static/js/cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_js_bootstrap.bundle.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
 </head>
 
 <body>
@@ -95,21 +95,33 @@
         <div class="navbar-collapse justify-content-center" id="navbarCenteredExample">
 
             <!-- Left links -->
-            <ul class="navbar-nav mb-5 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./">Main Paper</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./parts">Parts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./cad_request">CAD</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="./assembly">Assembly</a>
-                </li>
+        <ul class="navbar-nav mb-5 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./">Main Paper</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./parts">Parts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./cad_request">CAD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./assembly">Assembly</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./purchase">Purchase</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Software
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://github.com/leap-hand/LEAP_Hand_V2_API" target="_blank">API</a>
+              </li>
             </ul>
-            <!-- Left links -->
+          </li>
+        </ul>
+        <!-- Left links -->
         </div>
         <!-- Collapsible wrapper -->
     </div>
@@ -120,6 +132,11 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-full-width">
+            <div class="text-center">
+                <div class="alert alert-success text-center d-inline-block mx-auto" role="alert">
+                    I've tried my best to make each step as clear as possible :). <br>If you're confused or you'd like to suggest improvements, please email me at contact@leaphand.com."
+                </div>
+            </div>
             <div class="row">
                 <div class="col"  style="text-align:center;">
                   <!-- <div class="sketchfab-embed-wrapper"> <iframe title="LEAP Full Assembly Left" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="360" src="https://sketchfab.com/models/67d1215db44541cfb20ec8d87e3c8a27/embed?camera=0"> </iframe> </div> -->
@@ -228,7 +245,10 @@
                                     <p>(Do these wrist parts only if you are using the wrist mount)</p>
                                     <ol>
                                         <li>
-                                            Insert 4x M2.5 4mm brass inserts into the flat base to hold the USB board.
+                                            Insert four M2.5 x 5mm or M2.5 x 4mm brass inserts into the flat base to mount the USB board.
+                                            <br>Tip: Inserting them from the back may be easier.<br>
+
+                                            You should put inserts under the cover (side without the thumb) if you are using LEAP Power.  If you aren't, I recommend putting inserts under the thumb to give more space for the cables.
                                         </li>
                                         <li>
                                             Insert 2x M2.5 4mm brass inserts into the knub next to the arm to hold the lid on.
@@ -274,10 +294,10 @@
                         <p class="fs-6">
                             <ol>
                                 <li>Make sure the pulley horn printed correctly with the 0.2mm nozzle — it should have a clear jagged pattern that matches the horn design.</li>
-                                <li>Gently spin the pulley teeth onto the motor horn until they begin to engage. It may be too tight to push fully by hand, but should start to line up.</li>
+                                <li>Gently slide the pulley teeth around the motor horn until they begin to engage. It may be too tight to push fully by hand, but should start to line up.</li>
                                 <li>Use a M3 8mm buttonhead screw and screw it in through the pulley into the horn until the screw cannot easily turn becauase of the pulley.</li>
                                 <li>Place a clamp around your desk, put the motor on top with the pulley facing up, and then carefully push down on the face of the pulley using the clamp.</li>
-                                <li>Repeat clamping and tightening the screw gradually until the pulley sits flush against the motor—be careful that it's flush, but not rubbing.</li>
+                                <li>Repeat clamping and tightening the screw gradually until the pulley sits flush against the motor—be careful that it's flush, but it should not be rubbing.</li>
                                 <br>
                             </ol>
                         </p>
@@ -314,10 +334,10 @@
                         <p class="fs-6">
                             <ol>                               
                                 <li>
-                                    Unspool some of the fishing line, roughly 2x the length of the finger, and cut it.  
+                                    Unspool some of the fishing line, roughly 4x the length of the finger, and cut it.  
                                 </li>
                                 <li>
-                                    Tie a normal knot on one end. Put that knotted end through the small hole in the pulley and pull it tight so the knot sits securely inside the center of it.
+                                    Tie a normal knot on one end. Put that knotted end through the small hole in the pulley so the knot sits securely inside the center of it.  Pull it hard to make sure the knot does not slip out.  Cut the excess fishing line after the knot.
                                 </li>
                             </ol>
                         </p>
@@ -379,12 +399,15 @@
                     <div class="accordion-body">
                             <p>We must power up the MCP side motor to figure out its home pose.</p>      
                             I recommend you temporarily wire the motor to the USB board and the optional LEAP Power board as shown using 7.4v.  Then you can set the motor to the home position of 2048 either using our provided script or the Feetech GUI.            
+                            <br><br>
                             <div class="row">
                                 <div class="col-7">
-                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/program_motor.jpg" onclick="this.requestFullscreen()"/>               
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/program_motor.jpg" onclick="this.requestFullscreen()"/>  
+                                    <figcaption class="figure-caption text-center">If you are using the top mount, you can already mount the boards as shown using M2.5 8mm screws and some washers under the board to keep it flat.  <br>For the wrist mount option, you should not mount the boards here.</figcaption>          
                                 </div>  
                                 <div class="col-5">
                                     <img style="width:100%" class="img-fluid" src="./static/assm_img/gui.PNG" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center">The Feetech GUI is available on their website or in my Github API repository.</figcaption>
                                 </div>
                             </div>
                         </div>
@@ -445,7 +468,7 @@
                             <h4>Route Tendon Through Finger</h4>
                                 <ol>
                                     <li>Locate the three channels within the finger and carefully guide the tendon through each channel one at a time.</li>
-                                    <li>Pull the tendon to remove slack, leaving only two to three wraps around the pulley. Tie a regular knot near the fingertip to secure it, then trim any excess for a clean finish.</li>
+                                    <li>Pull the tendon to remove slack, this should probably leave only two to three wraps around the pulley. Tie a regular knot to secure it, then trim any excess for a clean finish.</li>
                                 </ol>
                             <h4>Attach Finger to Motor</h4>
                                 <ol>
@@ -481,41 +504,51 @@
                     </h2>
                     <div id="panelsStayOpen-collapseFourteen" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingFourteen">
                         <div class="accordion-body">
-                            One by one, connect the motors to the USB board with 7.4v and a USB cable similar to how you powered up the MCP side motors in the earlier step.<br>
-              You can either use the GUI that Feetech provides or my python ID script called set_motor_id.py. <br>
-                            Follow the IDs below:
                             <div class="row">
-                                <table class="table table-striped" style="table-layout: fixed; width: 100%; text-align: center;">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">MCP Side</th>
-                                    <th scope="col">Curl</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Index</th>
-                                    <td><b>0</b></td>
-                                    <td><b>1</b></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Middle</th>
-                                    <td><b>2</b></td>
-                                    <td><b>3</b></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Ring</th>
-                                    <td><b>4</b></td>
-                                    <td><b>5</b></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Thumb</th>
-                                    <td><b>6</b></td>
-                                    <td><b>7</b></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                <div class="col-8">
+                            One by one, connect the motors to the USB board with 7.4v and a USB cable similar to how you powered up the MCP side motors in the earlier step.<br><br>
+                            You can either use the GUI that Feetech provides or my python ID script called set_motor_id.py. <br><br>
+                            Follow the IDs below:
+                                    <table class="table table-striped" style="table-layout: fixed; width: 100%; text-align: center;">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">MCP Side</th>
+                                            <th scope="col">Curl</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Index</th>
+                                            <td><b>0</b></td>
+                                            <td><b>1</b></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Middle</th>
+                                            <td><b>2</b></td>
+                                            <td><b>3</b></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Ring</th>
+                                            <td><b>4</b></td>
+                                            <td><b>5</b></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Thumb</th>
+                                            <td><b>6</b></td>
+                                            <td><b>7</b></td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                    The image on the right shows the right hand IDs, you must mirror these IDs for the left hand.
+                                </div>
+                                <div class="col-4">
+                                    <figure class="figure">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/ID_hand.PNG" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center"></figcaption>
+                                </figure>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -532,7 +565,7 @@
                                 <p class="fs-6">
                                     <ol>
                                     <li>There are 8 open holes around the perimeter of the palm.</li>
-                                    <li>Select 4 evenly spaced holes to attach the lower cover using M2.5 8mm screws.</li>
+                                    <li>Select 4 evenly spaced holes to attach the lower cover using M2.5 10mm screws.</li>
                                     <li>Leave the remaining holes unscrewed so they can be used later for attaching the arm mounts.</li>
                                     <li>Tighten the screws gently—just enough to hold the cover in place and allow the components to align naturally.</li>
                                     </ol>
@@ -541,7 +574,7 @@
                             <div class="col-5">
                                 <figure class="figure">
                                     <img style="width:100%" class="img-fluid" src="./static/assm_img/palm_upper.jpg" onclick="this.requestFullscreen()"/>
-                                    <figcaption class="figure-caption text-center">The palm lower should sit flush with the palm.</figcaption>
+                                    <figcaption class="figure-caption text-center">The palm lower should sit flush with the palm.  The electronics may be mounted on top from a previous step if you are using the top mount.</figcaption>
                                 </figure>
                             </div>
                         </div>
@@ -550,7 +583,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingSeventeen">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeventeen" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeventeen">
-                        Wiring the Motors Together:
+                        Info on Wiring:
                     </button>
                     </h2>
                     <div id="panelsStayOpen-collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeventeen">
@@ -562,15 +595,15 @@
                                     You have two options here:
                                 </p>  
                                     <ol>
-                                    <li>Use the LEAP Power board.  This simplifies the wiring and ensures consistency.  Connect all of the motors to the board and the power and then connect this to the USB board.</li>
-                                    <li>Use the splitters provided with the motors, chain them together and wrap the cables into the respective mount of the hand which you will attach below.</li>
-                                    <li><strong>I recommend having your chosen mount on hand during the wiring process. This ensures you can properly route and tuck the cables into their designated spots before fully securing the mount to the hand.</strong></li>
+                                    <li>The <a href="https://github.com/leap-hand/LEAP_Power/blob/main/export/output_feetech/assembly_files.jpg">LEAP Power Board</a> simplifies the wiring and ensures consistency. You will connect all of the motors to the power board and one Feetech cable to the USB board.  The XT30 power will be split by the Power board.</li>
+                                    <li>Use the splitters provided with the motors, chain them all together so they are all connected and wrap the cables into the respective mount of the hand which you will attach below.</li>
                                     </ol>
                                 <br> 
+                                <strong>I recommend having your chosen mount on hand during the wiring process. This ensures you can properly route and tuck the cables into their designated spots before fully securing the mount to the hand.</strong>
                             </div>
                             <div class="col-5">
                                 <figure class="figure">
-                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/wiring.jpg" onclick="this.requestFullscreen()"/>
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/leap_power.jpg" onclick="this.requestFullscreen()"/>
                                     <figcaption class="figure-caption text-center">Wire each of the 8 motor cables to the power board using any of the available ports.</figcaption>
                                 </figure>
                             </div>
@@ -580,29 +613,65 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingFifteen">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFifteen" aria-expanded="false" aria-controls="panelsStayOpen-collapseFifteen">
-                        Arm Mounts:
+                        1) Top Mount Instructions:
                     </button>
                     </h2>
                     <div id="panelsStayOpen-collapseFifteen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFifteen">
                     <div class="accordion-body">
                         <div class="row">
                             <div class="col">
+                                The wrist mount follows anatomical positioning, but the top mount often works better with many 6DOF arms designed for grippers. Feel free to choose whichever option you prefer. <br><br>
+
                                 <h4>Top Mount:</h4>
                                 <ol>
-                                    <li>There are two parts, a TODO top hat and a Use M6 screws to screw the top mount into the </li>
-
+                                    <li>Make sure the electronics are fastened to the top of the hand.</li>
+                                    <li>Attach the top mount to your robot arm of choice.  You will need either M6 or M3 screws of varying lengths depending on your arm.</li>
+                                    <li>Tuck the wires into the top mount and attach the top mount onto the hand.  You will need up to 4x M2.5 14mm screws and 4x 8mm screws, but you do not need to use all the screw holes.</li>
+                                    <li>You can use any of the ziptie channels in the four corners of the palm to assist with cable managing the power and usb cables.</li>
                                 </ol>
                                     <br>
-                                
-                                <h4>Wrist Mount:</h4>                   
-                                <ol>
-                                </ol>
-                                <p class="text-success"><em>Tip: </em>While the wrist mount is anatomically correct, the top mount is better for many 6DOF arms designed for grippers.</p>   
+                                <img style="width:100%" class="img-fluid" src="./static/assm_img/arx_mount_back.jpg" onclick="this.requestFullscreen()"/>   
+                                <figcaption class="figure-caption text-center">LEAP v2 mounted on the Piper arm. TODO REPLACE The ziptie mounts in the corners are not used in this image, but for prolonged use I highly recommend it to protect the board connectors.</figcaption>
+                                <br> 
+                                <p class="text-success"><em>Tip: Make sure the MCP side motor cables can move freely once either mount is placed on.</em></p>   
                             </div>
                             <div class="col">
                                 <figure class="figure">
-                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/mount.JPG" onclick="this.requestFullscreen()"/>
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/wiring.jpg" onclick="this.requestFullscreen()"/>
                                     <figcaption class="figure-caption text-center">The Four Fingers Bottom Mount is attached using M3 screws to the hand and M6 screws to the arm.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <br>                
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOneFifteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOneFifteen" aria-expanded="false" aria-controls="panelsStayOpen-collapseOneFifteen">
+                        2) Wrist Mount Instructions:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOneFifteen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOneFifteen">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-7">
+                                <h4>Wrist Mount:</h4>                   
+                                <ol>
+                                    <li>Secure the wrist mount to the bottom of the hand using M2.5 14mm screws. Ensure all cables are routed through the bottom side of the hand and into the flat part of the wrist mount where the electronics will go.</li>
+                                    <li>Connect the servo cables using either the LEAP Power board or splitters. When using LEAP Power, plug the shorter cables into the ports nearest to the palm so that the MCP side motor cables are not pulled when the MCP curls.</li>
+                                    <li>Slide the USB board beneath its cover and fasten it to the palm using 2 or 3 M2.5 8mm screws.  If you are using LEAP Power, it should gently rest on top of the USB board cover.  Otherwise you may have to put the USB board under the thumb to make more room for cables.</li>
+                                    <li>Attach the mount to your robot arm of choice.  You will need either M6 or M3 screws of varying lengths depending on your arm.</li>
+                                    <li>Align the wrist cover and position it over the motor cables and USB board. You can use two M2.5 8mm screws on the side, two M2.5 8mm screws from the top and one M2.5 6mm screw on the inner screw onto the wrist mount. 
+                                    <li>Finally, add one M2.5 16mm screw for the Wrist Lid to the palm cover.</li>
+                                    <li>Attach the USB and XT30 power cables. It's recommended to use zip ties through the provided holes to prevent stress on the board connectors and to get the cables out of the way of the thumb.</li>
+                                </ol>
+                                <p class="text-success"><em>Tip: Make sure the MCP side motor cables can move freely once either mount is placed on.</em></p>   
+                            </div>
+                            <div class="col-5">
+                                <figure class="figure">
+                                    <img style="width:100%" class="img-fluid" src="./static/assm_img/wiring_wrist.jpg" onclick="this.requestFullscreen()"/>
+                                    <figcaption class="figure-caption text-center">.</figcaption>
                                 </figure>
                             </div>
                         </div>
@@ -621,7 +690,7 @@
                         <p>
                             <strong>Congratulations on completing the assembly of the hand!</strong><br><br>
                             When powering on the hand for the first time and running the tensioning script, ensure that the tendons are properly wrapped and seated inside the pulley grooves.
-                            For more details, refer to the LEAP Hand v2 Software API.
+                            For more details, refer to the <a href="https://github.com/leap-hand/LEAP_Hand_V2_API">LEAP Hand v2 Software API</a>.
                         </p>                          
                         <p class="text-success"><em>Tip:</em> If you are having trouble with the fingers curling, check that the tendons are properly on the pulleys and the knots are tied tightly.</p>   
                     </div>

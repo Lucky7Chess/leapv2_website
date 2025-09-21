@@ -42,25 +42,25 @@
   <meta name="twitter:player:height" content="360" />
 
 
-  <title>LEAP Hand V2: Dexterous, Low-cost Hybrid Rigid-Soft Hand for Robot Learning</title>
+  <title>Demonstrating LEAP Hand v2: Low-Cost, Easy-to-Assemble, High-Performance Hand for Robot Learning</title>
 
-  <link href="./static/css/fonts.googleapis.com_css_family=Google+Sans_Noto+Sans_Castoro.css"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="./static/js/cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_js_bootstrap.bundle.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script src="./static/js/isInViewport.min.js"></script>
 
-  <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="./static/css/cdn.jsdelivr.net_gh_jpswalsh_academicons@1_css_academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="stylesheet" href="./static/css/cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_css_bootstrap.min.css">
-  <script src="./static/js/isInViewport.min.js"></script>
-  <script src="./static/js/cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_js_bootstrap.bundle.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
 </head>
 
 <body>
@@ -81,6 +81,12 @@
     .accordion-button:not(.collapsed) {
     border: 1px solid #747474; /* Border color and thickness */
     }
+    .sketchfab-embed-wrapper-top,
+    .sketchfab-embed-wrapper-top iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
     </style>    
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BCD5FA;">
     <!-- Container wrapper -->
@@ -95,21 +101,33 @@
         <div class="navbar-collapse justify-content-center" id="navbarCenteredExample">
 
             <!-- Left links -->
-            <ul class="navbar-nav mb-5 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./">Main Paper</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./parts">Parts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="./cad_request">CAD</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./assembly">Assembly</a>
-                </li>
+        <ul class="navbar-nav mb-5 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./">Main Paper</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./parts">Parts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./cad_request">CAD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./assembly">Assembly</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./purchase">Purchase</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Software
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://github.com/leap-hand/LEAP_Hand_V2_API" target="_blank">API</a>
+              </li>
             </ul>
-            <!-- Left links -->
+          </li>
+        </ul>
+        <!-- Left links -->
         </div>
         <!-- Collapsible wrapper -->
     </div>
@@ -121,30 +139,177 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <div class="row">
-            <div class="col"  style="text-align:center;">
-              <div class="sketchfab-embed-wrapper"> <iframe title="LEAP Full Assembly Left" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="360" src="https://sketchfab.com/models/67d1215db44541cfb20ec8d87e3c8a27/embed?camera=0"> </iframe> </div>
-              <a href="./static/cad/left" style="padding-right: 75px; font-weight: bold; color: #1CAAD9;">Download Left URDF</a>
-              <br>
-              <a href="./static/cad/full_hand/leap_v2_full_assembly_left.stp" style="padding-right: 80px; font-weight: bold; color: #1CAAD9;">Download Left STP</a>
+           <div class = "row">
+              <div class = "col">
+                <div>
+                 <img style="width:100%" class="img-fluid" src="./static/cad_img/top_round_assm.jpg" onclick="this.requestFullscreen()"/>
+                 </div>
+              </div>
+              <div class = "col">
+                <div class="sketchfab-embed-wrapper-top">
+                  <iframe
+                    title="LEAP Full Assembly Right"
+                    frameborder="0"
+                    allowfullscreen
+                    mozallowfullscreen="true"
+                    webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    xr-spatial-tracking
+                    execution-while-out-of-viewport
+                    execution-while-not-rendered
+                    web-share
+                    src="https://sketchfab.com/models/8c12b43cea214aa8a94534f8c47d0c09/embed?camera=0">
+                  </iframe>
+                </div>  
+              </div>
+              <div class = "col">
+                <div class="sketchfab-embed-wrapper-top">
+                  <iframe
+                    title="LEAP Full Assembly Right"
+                    frameborder="0"
+                    allowfullscreen
+                    mozallowfullscreen="true"
+                    webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    xr-spatial-tracking
+                    execution-while-out-of-viewport
+                    execution-while-not-rendered
+                    web-share
+                    src="https://sketchfab.com/models/1669385ebe6049af82dd78ab2b372b12/embed?camera=0">
+                  </iframe>
+                </div>  
+              </div>
             </div>
-            <div class="col">
-              <div class="sketchfab-embed-wrapper"> <iframe title="LEAP Full Assembly Right" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="360" src="https://sketchfab.com/models/3633c296553b434fb468fce88364f995/embed?camera=0"> </iframe> </div>
-                <a href="./static/cad/urdf/leap_right.zip" style="padding-left: 175px; font-weight: bold; color: #1CAAD9;">Download Right URDF</a>
-                <br>
-                <a href="./static/cad/full_hand/leap_v2_full_assembly_right.stp" style="padding-left: 180px; font-weight: bold; color: #1CAAD9;">Download Right STP</a>
+
+            <div class = "row text-center">
+              <div class = "col">
+                <a href="https://cad.onshape.com/documents/4ce070cc2f80bc45313d2484/w/48d8083e8896b328d0280170/e/37ba2ecde2241fc44a549ac4?renderMode=0&uiState=68aa5e7271f00b0174eb73cc">Round Finger Top Mount Onshape</a>        
+              </div>
+              <div class = "col">
+                Round Finger Top Mount Left <a href="./static/cad/assembly/">URDF</a> <a href="./static/cad/assembly/round_finger_top_mount_left.stp">STP</a><br>             
+              </div>
+              <div class = "col">
+                Round Finger Top Mount Right <a href="">URDF</a> <a href="./static/cad/assembly/round_finger_top_mount_right.stp">STP</a><br>
+              </div>
             </div>
-          </div>
-          **For the left hand, the only adjustments are mirroring the upper and lower parts of the palm in the STP and using a left-bottom plate to ensure the text is not mirrored.
+            <br>
+            <div class = "row">
+              <div class = "col">
+                <div>
+                 <img style="width:100%" class="img-fluid" src="./static/cad_img/top_flat_assm.jpg" onclick="this.requestFullscreen()"/>
+                 </div>
+              </div>
+              <div class = "col">
+                <div class="sketchfab-embed-wrapper-top">
+                  <iframe
+                    title="LEAP Full Assembly Right"
+                    frameborder="0"
+                    allowfullscreen
+                    mozallowfullscreen="true"
+                    webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    xr-spatial-tracking
+                    execution-while-out-of-viewport
+                    execution-while-not-rendered
+                    web-share
+                    src="https://sketchfab.com/models/bbdb84e897ff44318ccbe26b9970fb08/embed?camera=0">
+                  </iframe>
+                </div>  
+              </div>
+              <div class = "col">
+                <div class="sketchfab-embed-wrapper-top">
+                  <iframe
+                    title="LEAP Full Assembly Right"
+                    frameborder="0"
+                    allowfullscreen
+                    mozallowfullscreen="true"
+                    webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    xr-spatial-tracking
+                    execution-while-out-of-viewport
+                    execution-while-not-rendered
+                    web-share
+                    src="https://sketchfab.com/models/63dadf6388f6478cb8b1e4ddbdd2303d/embed?camera=0">
+                  </iframe>
+                </div>  
+              </div>
+            </div>
+
+            <div class = "row text-center">
+              <div class = "col">
+                <a href="https://cad.onshape.com/documents/4ce070cc2f80bc45313d2484/w/48d8083e8896b328d0280170/e/37ba2ecde2241fc44a549ac4?renderMode=0&uiState=68aa5e7271f00b0174eb73cc">Flat Finger Top Mount Onshape</a>        
+              </div>
+              <div class = "col">
+                Flat Finger Top Mount Left <a href="">URDF</a> <a href="./static/cad/assembly/flat_finger_top_mount_left.stp">STP</a><br>
+              </div>
+              <div class = "col">
+                Flat Finger Top Mount Right <a href="">URDF</a> <a href="./static/cad/assembly/flat_finger_top_mount_right.stp">STP</a><br>
+              </div>
+            </div>
+            <br>
+
+            <div class = "row">
+              <div class = "col">
+                <div>
+                 <img style="width:100%" class="img-fluid" src="./static/cad_img/wrist_round_assm.jpg" onclick="this.requestFullscreen()"/>
+                 </div>
+              </div>
+              <div class = "col">
+                <div class="sketchfab-embed-wrapper-top">
+                  <iframe
+                    title="LEAP Full Assembly Right"
+                    frameborder="0"
+                    allowfullscreen
+                    mozallowfullscreen="true"
+                    webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    xr-spatial-tracking
+                    execution-while-out-of-viewport
+                    execution-while-not-rendered
+                    web-share
+                    src="https://sketchfab.com/models/8929a18e30be4454b1f801b48ca85ff8/embed?camera=0">
+                  </iframe>
+                </div>  
+              </div>
+              <div class = "col">
+                <div class="sketchfab-embed-wrapper-top">
+                  <iframe
+                    title="LEAP Full Assembly Right"
+                    frameborder="0"
+                    allowfullscreen
+                    mozallowfullscreen="true"
+                    webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    xr-spatial-tracking
+                    execution-while-out-of-viewport
+                    execution-while-not-rendered
+                    web-share
+                    src="https://sketchfab.com/models/893bdbb4d8e542678e7dbde685f65237/embed?camera=0">
+                  </iframe>
+                </div>  
+              </div>
+            </div>
+
+            <div class = "row text-center">
+              <div class = "col">
+                <a href="https://cad.onshape.com/documents/4ce070cc2f80bc45313d2484/w/48d8083e8896b328d0280170/e/37ba2ecde2241fc44a549ac4?renderMode=0&uiState=68aa5e7271f00b0174eb73cc">Round Finger Wrist Mount Onshape</a>        
+              </div>
+              <div class = "col">
+                Round Finger Wrist Mount Left <a href="">URDF</a> <a href="./static/cad/assembly/round_finger_wrist_mount_left.stp">STP</a><br>
+              </div>
+              <div class = "col">
+                Round Finger Wrist Mount Right <a href="">URDF</a> <a href="./static/cad/assembly/round_finger_wrist_mount_right.stp">STP</a><br>
+              </div>
+            </div>
           <br>
           <br>     
           <div class="column is-full-width">
-            <h3 class="title is-3" style="text-align: center;"><bold>Multi-Material Parts</bold></h3>  
+            <h3 class="title is-3" style="text-align: center;"><bold>Multi-Material Instructions</bold></h3>  
             <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">          
                     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
-                        Printer Preparation:
+                        Soft Printer Setup:
                     </button>
                     </h2>
                     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
@@ -169,14 +334,13 @@
                                         </ul>
                                     </li>
                                     <li>If the nozzle is old, consider replacing it with a new MK8 nozzle for better filament flow.</li>
-                                </ol>
+                                </ol> 
                                 
-                                <h3>Adjusting Flow Rate</h3>
-                                <p>If using a new TPU nozzle, adjust the flow rate:</p>
-                                <ul>
-                                    <li>On the printer's touch screen, navigate to the adjustment tab and set the TPU nozzle's flow rate to <strong>95%</strong>.</li>
-                                </ul>
-                                <p>This adjustment compensates for the easier flow of a fresh nozzle, unlike an old nozzle which may slow down.  The fingers should feel firm but not super difficult to curl.</p>
+                                 <h3>Loading Soft Filament</h3>
+                                <ol>
+                                    <li>Open the extruder gear by pulling the tab on the top of the extruder facing you.</li>
+                                    <li>Carefully feed the filament through the extruder.</li>
+                                </ol>
                             </div>
                             <div class = "col-md-5">
                                 <img style="width:85%" class="img-fluid float-end" src="./static/figures/nozzle_replace.JPG" onclick="this.requestFullscreen()"/>
@@ -188,28 +352,24 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-                        Printing Instructions:
+                        Soft Filament Print Instructions:
                     </button>
                     </h2>
                     <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
                     <div class="accordion-body">
                         <div class = "row">
                             <div class = "col-md-7">
-                                <h3>Setting Up Cura</h3>
+                                <h3>Setting Up Cura to Print</h3>
                                 <ol>
                                     <li>Download and install <a href="https://ultimaker.com/software/ultimaker-cura/">Cura</a> (verified with version 5.3).</li>
                                     <li>Add the <a href="https://wiki.snapmaker.com/en/Snapmaker_Luban/cura_plugin">Snapmaker J1S plugin</a> and ensure the nozzle sizes are configured correctly.</li>
                                     <li>Open the provided <code>.3MF</code> files and select <strong>"Open as Project"</strong> instead of <strong>"Open as Model"</strong>.</li>
                                     <li>The print settings and model will load automatically.</li>
-                                    <li>Click <strong>Slice</strong>, then export the file to the printer via USB drive, or WiFi connection.
+                                    <li>Click <strong>Slice</strong>, then export the gcode to the printer via USB drive, or WiFi connection.
                                     </li>
                                 </ol>
                             
-                                <h3>Loading Soft Filament</h3>
-                                <ol>
-                                    <li>Open the extruder gear by pulling the tab on the top of the extruder facing you.</li>
-                                    <li>Carefully feed the filament through the extruder.</li>
-                                </ol>
+                               
                             
                                 <h3>Dealing with Clogs</h3>
                                 <ul>
@@ -231,9 +391,78 @@
                     </div>
                 </div>
                 <div class="accordion-item">
+                    <h3 class="accordion-header" id="panelsStayOpen-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                        Info on the Printer Settings in the 3MF file:
+                    </button>
+                    </h3>
+                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+                    <div class="accordion-body">
+                        <h3>Settings Overview</h3>
+                        <ul>
+                            <li>All <strong>fingers and palm</strong> share similar print settings.</li>
+                            </li>
+                        </ul>
+
+                        <h3>Adjusting Flow Rate</h3>
+                        <p>The flow rate directly affects the density of the foaming material, as demonstrated in  <a href="https://youtu.be/aQe4NaYw93Q?si=VSz0xh_Wca9T861T" target="_blank">this video</a>. Follow these guidelines:</p>
+                        <ul>
+                            <li>Modulate the flow rate to control the material's density and stiffness.</li>
+                            <li>Use a <strong>higher flow rate</strong> for the outer skin of the fingers and palm compared to the inner parts.</li>
+                        </ul>
+                        <h3>Support and Adhesion</h3>
+                        <ul>
+                            <li>Enable <strong>Support Touching Build Plate</strong> to prevent support structures from entering the tendon channel.</li>
+                            <li>Ensure proper adhesion so the fingers stick consistently to the build plate.</li>
+                            <li>Use <strong>PLA</strong> for support material to prevent it from sticking to the TPU of the fingers.</li>
+                        </ul>
+                        <h3>Temperature and Retraction Settings</h3>
+                        <p>Printer temperature and retraction settings are optimized to ensure consistent material flow and foaming. The messy retraction and TON of stringiness is normal and prevents clogging.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                        Info on Material and 3D Printer Choice:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+                    <div class="accordion-body">
+                        <p>
+                            The <a href="https://recreus.com/gb/filaments/24-1045-filaflex-foamy.html#/2-diameter-175_mm/9-weight-600_gr/10-colour-natural">Recreus Filaflex Foamy</a> is the softest material that Snapmaker can print that foams. The <a href="https://colorfabb.com/filaments/materials/tpu-filaments/varioshore-tpu">Colorfabb Varioshore TPU</a> does not have as good restitution properties after the finger joint is flexed.
+                          </p>
+                          <p>
+                            For PLA, <a href="https://a.co/d/iDNecKH" target="_blank">Polymaker Polylite PLA Pro</a> was the best material I could find. You can also try using 
+                            <a href="https://a.co/d/d9fVQlh" target="_blank">Polymaker Tough PC filament</a> at 300&deg;C, but my experience is that it doesn't print as consistently even if it does make the tendon channel slightly stronger.
+                          </p>
+                          <p>
+                            Note that the <a href="https://us.store.bambulab.com/products/ams-multicolor-printing">Bambu AMS</a> cannot switch between TPU and PLA automatically.
+                          </p>
+                          <p>
+                            The <a href="https://www.prusa3d.com/category/original-prusa-xl/">Prusa XL</a> is a new option, but it is more expensive ($3500) and by default, PrusaSlicer does not have separate flow rate settings for infill and outer walls.
+                          </p>
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                        PLA Printing Instructions:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                        <p class="fs-6">Print these PLA parts using any standard printer and 0.4mm nozzle. I used the Snapmaker J1S with two 0.4mm steel-hardened nozzles (which are less prone to clogging), with the left nozzle filled with <a href="https://a.co/d/iDNecKH">Black Polymaker Pro PLA</a> and the right nozzle loaded with <a href="https://a.co/d/cbVsHUl">dissolvable PVA support.</a></p>
+                        <br>
+                         Note that the pulley is the only PLA part that requires a 0.2mm nozzle. All other PLA parts can be printed with a standard 0.4mm nozzle.
+                      </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
                     <h3 class="accordion-header" id="panelsStayOpen-headingFive">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
-                        Using your own STP Model:
+                        If you want to use your own STP Model:
                     </button>
                     </h3>
                     <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
@@ -303,66 +532,9 @@
                     </div>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="panelsStayOpen-headingSix">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
-                        Info on the Printer Settings in the 3MF file:
-                    </button>
-                    </h3>
-                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
-                    <div class="accordion-body">
-                        <h3>Settings Overview</h3>
-                        <ul>
-                            <li>All <strong>fingers and palm</strong> share similar print settings.</li>
-                            </li>
-                        </ul>
-
-                        <h3>Adjusting Flow Rate</h3>
-                        <p>The flow rate directly affects the density of the foaming material, as demonstrated in  <a href="https://youtu.be/aQe4NaYw93Q?si=VSz0xh_Wca9T861T" target="_blank">this video</a>. Follow these guidelines:</p>
-                        <ul>
-                            <li>Modulate the flow rate to control the material's density and stiffness.</li>
-                            <li>Use a <strong>higher flow rate</strong> for the outer skin of the fingers and palm compared to the inner parts.</li>
-                        </ul>
-                        <h3>Support and Adhesion</h3>
-                        <ul>
-                            <li>Enable <strong>Support Touching Build Plate</strong> to prevent support structures from entering the tendon channel.</li>
-                            <li>Ensure proper adhesion so the fingers stick consistently to the build plate.</li>
-                            <li>Use <strong>PLA</strong> for support material to prevent it from sticking to the TPU of the fingers.</li>
-                        </ul>
-                        <h3>Temperature and Retraction Settings</h3>
-                        <p>Printer temperature and retraction settings are optimized to ensure consistent material flow and foaming. The messy retraction and TON of stringiness is normal and prevents clogging.</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
-                        Info on Material and 3D Printer Choice:
-                    </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
-                    <div class="accordion-body">
-                        <p>
-                            The <a href="https://recreus.com/gb/filaments/24-1045-filaflex-foamy.html#/2-diameter-175_mm/9-weight-600_gr/10-colour-natural">Recreus Filaflex Foamy</a> is the softest material that Snapmaker can print that foams. The <a href="https://colorfabb.com/filaments/materials/tpu-filaments/varioshore-tpu">Colorfabb Varioshore TPU</a> does not have as good restitution properties after the finger joint is flexed.
-                          </p>
-                          <p>
-                            For PLA, <a href="https://a.co/d/iDNecKH" target="_blank">Polymaker Polylite PLA Pro</a> was the best material I could find. You can also try using 
-                            <a href="https://a.co/d/d9fVQlh" target="_blank">Polymaker Tough PC filament</a> at 300&deg;C, but my experience is that it doesn't print as consistently even if it does make the tendon channel slightly stronger.
-                          </p>
-                          <p>
-                            Note that the <a href="https://us.store.bambulab.com/products/ams-multicolor-printing">Bambu AMS</a> cannot switch between TPU and PLA automatically.
-                          </p>
-                          <p>
-                            The <a href="https://www.prusa3d.com/category/original-prusa-xl/">Prusa XL</a> is a new option, but it is more expensive ($3500) and by default, PrusaSlicer does not have separate flow rate settings for infill and outer walls.
-                          </p>
-                    </div>
-                    </div>
-                </div>
             </div>
-    
-
-
             <br><br>
+            <h3 class="title is-3" style="text-align: center;"><bold>Palm</bold></h3>  
             <div class = "row">
               <table class="table table-striped">
                 <thead>
@@ -370,177 +542,394 @@
                     <th class="col-1">Item</th>
                     <th class="col-1">Preview</th>
                     <th class="col-1">Download</th>
-                    <th class="col-1">Quantity</th>
+                    <th class="col-1">Instructions</th>
                   </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/no_fingers_upper_palm.JPG" /></td>
                         <td>
-                          <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/617df63c21ec450c810049efa00c0464/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+                          <img style="width:300px; height:200px;" class="img-fluid" src="./static/assm_img/palm_support_removed.jpg" />
                         </td>
-                        <td><a href="./static/cad/palm_upper/no_fingers_upper_palm.stp">Main Palm STP</a>
+                        <td>
+                          <div class="sketchfab-embed-wrapper">
+                            <iframe 
+                              title="Finger Tip"
+                              width="300"
+                              height="200"
+                              frameborder="0"
+                              allowfullscreen 
+                              mozallowfullscreen="true" 
+                              webkitallowfullscreen="true" 
+                              allow="autoplay; fullscreen; xr-spatial-tracking" 
+                              xr-spatial-tracking 
+                              execution-while-out-of-viewport 
+                              execution-while-not-rendered 
+                              web-share 
+                              src="https://sketchfab.com/models/7614b9c54cc747319d7658a2220503ee/embed?autospin=1&autostart=0&camera=0">
+                            </iframe>
+                          </div>
+                        </td>
+                        <td><a href="./static/cad/palm/palm.stp">Palm STP</a>
                         <br>
-                        <a href="./static/cad/palm_upper/no_fingers_upper_palm.3mf">Main Palm 3MF</a>
+                        <a href="./static/cad/palm/palm.3mf">Palm 3MF</a>
                         </td>
                         <td>
-                        1
+                        1x
+                        <br>
+                        0.4mm nozzle TPU<br>
+                        0.2mm nozzle PLA
                         </td>
                     </tr>
-                    <tr>
-                        <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/thumb_upper_palm.JPG" /></td>
-                        <td>
-                          <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/a4c6fd197b794a4b90642823a7c1bb26/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
-                        </td>
-                        <td><a href="./static/cad/palm_upper/thumb_upper_palm.stp">Wrist Upper STP</a>
-                        <br>
-                        <a href="./static/cad/palm_upper/thumb_upper_palm.3mf">Wrist Upper 3MF</a>
-                        </td>
-                        <td>
-                        1
-                        </td>
-                    </tr>
-                  <tr>
-                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/finger.JPG" /></td>
-                    <td>
-                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/0dcc4ab843f548a2aadde41fd7a50b7e/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
-                    </td>
-                    <td><a href="./static/cad/fingers/finger.stp">Finger STP</a>
-                    <br>
-                    <a href="./static/cad/fingers/finger.3mf">Finger 3MF</a>
-                    </td>
-                    <td>
-                    4
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/finger_touch.JPG" /></td>
-                    <td>
-                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/96cf06b158df4d799aeae694bc79c4dc/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
-                    </td>
-                    <td><a href="./static/cad/fingers/finger_touch.stp">Finger Touch STP</a>
-                    <br>
-                    <a href="./static/cad/fingers/finger_touch.3mf">Finger Touch 3MF</a>
-                    <br>
-                    The hard PLA surface provides an ideal surface for glueing the touch sensor.
-                    </td>
-                    <td>
-                    4 <br>(Choose this or the regular finger)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/finger_touch_slot.JPG" /></td>
-                    <td>
-                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/4977c9c74bbf4aa389fd292ad113431e/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
-                    </td>
-                    <td><a href="./static/cad/fingers/finger_touch_slot.stp">Finger Touch With Cable Slot STP</a>
-                    <br>
-                    <a href="./static/cad/fingers/finger_touch_slot.3mf">Finger Touch With Cable Slot 3MF</a>
-                    <br>
-                    The slot allows for touch sensor cable to pass through.
-                    </td>
-                    <td>
-                    4 <br>(Choose this or the regular finger)
-                    </td>
-                  </tr>
-
-
-                  <tr>
-                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/thumb.JPG" /></td>
-                    <td>
-                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/ae27ad213b534fed846e370b81d10a80/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
-                    </td>
-                    <td><a href="./static/cad/fingers/thumb.stp">Thumb STP</a>
-                    <br>
-                    <a href="./static/cad/fingers/thumb.3mf">Thumb 3MF</a>
-                    </td>
-                    <td>
-                    1
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/thumb_touch.JPG" /></td>
-                    <td>
-                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/2219b219b94d4c5eaed35c567c59a164/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
-                    </td>
-                    <td><a href="./static/cad/fingers/thumb_touch.stp">Thumb Touch STP</a>
-                    <br>
-                    <a href="./static/cad/fingers/thumb_touch.3mf">Thumb Touch 3MF</a>
-                    <br>
-                    The hard PLA surface provides an ideal surface for glueing the touch sensor.
-                    </td>
-                    <td>
-                    1 <br>(Choose this or the regular thumb)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/thumb_touch_slot.JPG" /></td>
-                    <td>
-                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/183b7373c4884c47a759eaa447eb5437/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
-                    </td>
-                    <td><a href="./static/cad/fingers/thumb_touch_slot.stp">Thumb Touch With Cable Slot STP</a>
-                    <br>
-                    <a href="./static/cad/fingers/thumb_touch_slot.3mf">Thumb Touch With Cable Slot 3MF</a>
-                    <br>
-                    The slot allows for touch sensor cable to pass through.
-                    </td>
-                    <td>
-                    1 <br>(Choose this or the regular thumb)
-                    </td>
-                  </tr>
                 </tbody> 
               </table>
             </div>
+            <h3 class="title is-3" style="text-align: center;"><bold>Finger</bold></h3>  
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingSeventyThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeventyThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseSeventyThree">
+                        Picking Finger Style:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSeventyThree" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingSeventyThree">
+                      <div class="accordion-body">
+                        Print 1x thumb and 3x fingers. Two finger styles are available.  You do not need to mirror them for the left hand.<span style="display:block; height:0.75em;"></span>
+                        <strong>Rounded Fingers:</strong> Great for pinch grasps and general purpose use.  I recommend you start with these.
+                        <span style="display:block; height:0.75em;"></span>
+                        <strong>Flat fingers: </strong>For mounting touch sensors.  There are three versions:
+                        <ul>
+                          <li><strong>Normal:</strong> Features a soft TPU pad for general use.</li>
+                          <li><strong>Touch:</strong> Includes a hard insert that's easy to glue sensors onto.</li>
+                          <li><strong>Touch with Cable Slot:</strong> Provides a slot for routing touch sensor wires without covering the fingertip.</li>
+                        </ul>
+                        <p class="text-success"><em>Tip: </em>I highly recommend you use the 3MF files due to the complicated settings required for the fingers.</p>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class = "row">
+                <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th class="col-1">Item</th>
+                    <th class="col-1">Preview</th>
+                    <th class="col-1">Download</th>
+                    <th class="col-1">Instructions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/finger_round.jpg" /></td>
+                    <td>
+                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/ec73e27772d9413bbf9d514437327b48/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+                    </td>
+                    <td><a href="./static/cad/finger/finger_round.stp">Round Finger STP</a>
+                    <br>
+                    <a href="./static/cad/finger/finger_round.3mf">Round Finger 3MF</a>
+                    </td>
+                    <td>
+                    3x <br>
+                        0.4mm nozzle TPU<br>
+                        0.2mm nozzle PLA </td>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/finger.jpg" /></td>
+                    <td>
+                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/769d9452b4ad4db5a0bb376db06cb840/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+                    </td>
+                    <td><a href="./static/cad/finger/finger_flat.stp">Flat Finger STP</a>
+                    <br>
+                    <a href="./static/cad/finger/finger_flat.3mf">Flat Finger 3MF</a>
+                    </td>
+                    <td>
+                    3x <br>
+                        0.4mm nozzle TPU<br>
+                        0.2mm nozzle PLA </td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/finger_touch.jpg" /></td>
+                    <td>
+                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8dd96cbf0b214a38b40072bba9d0e1ec/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+                    </td>
+                    <td><a href="./static/cad/finger/finger_touch.stp">Finger Touch STP</a>
+                    <br>
+                    <a href="./static/cad/finger/finger_touch.3mf">Finger Touch 3MF</a>
+                    <br>
+                    </td>
+                    <td>
+                    3x  <br>
+                        0.4mm nozzle TPU<br>
+                        0.2mm nozzle PLA </td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img id="img1" style="width:300px;" class="img-fluid" src="./static/cad_img/finger_touch_slot_sensor.jpg" />
+                      <img id="img2" style="width:300px;  display: none;" class="img-fluid" src="./static/cad_img/finger_touch_slot.jpg" />
+                    </td>
+                    <td>
+                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/548530bd7d264e7d8657e82dda873901/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+                    </td>
+                    <td><a href="./static/cad/finger/finger_touch_slot.stp">Finger Touch With Cable Slot STP</a>
+                    <br>
+                    <a href="./static/cad/finger/finger_touch_slot.3mf">Finger Touch With Cable Slot 3MF</a>
+                    <br>
+                    </td>
+                    <td>
+                    3x  <br>
+                        0.4mm nozzle TPU<br>
+                        0.2mm nozzle PLA </td>
+                    </td>
+                  </tr>
+                    <tr>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/thumb_round.jpg" /></td>
+                    <td>
+                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/1438dc13d8934ccc86fd5761bbacf394/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+                    </td>
+                    <td><a href="./static/cad/thumb/thumb_round.stp">Round Thumb STP</a>
+                    <br>
+                    <a href="./static/cad/thumb/thumb_round.3mf">Round Thumb 3MF</a>
+                    </td>
+                    <td>
+                    1x <br>
+                        0.4mm nozzle TPU<br>
+                        0.2mm nozzle PLA </td>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/thumb.jpg" /></td>
+                    <td>
+                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/ceac9787c1cb4cf0b7d4d617c77e4102/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+                    </td>
+                    <td><a href="./static/cad/thumb/thumb.stp">Thumb STP</a>
+                    <br>
+                    <a href="./static/cad/thumb/thumb.3mf">Thumb 3MF</a>
+                    </td>
+                    <td>
+                    1x  <br>
+                        0.4mm nozzle TPU<br>
+                        0.2mm nozzle PLA </td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/thumb_touch.jpg" /></td>
+                    <td>
+                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/932c55306e324ac2ae31488bc1e46f93/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+                    </td>
+                    <td><a href="./static/cad/thumb/thumb_touch.stp">Thumb Touch STP</a>
+                    <br>
+                    <a href="./static/cad/thumb/thumb_touch.3mf">Thumb Touch 3MF</a>
+                    <br>
+                    The hard PLA surface provides an ideal surface for gluing the touch sensor.
+                    </td>
+                    <td>
+                    1x  <br>
+                        0.4mm nozzle TPU<br>
+                        0.2mm nozzle PLA </td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img id="img3" style="width:300px;" class="img-fluid" src="./static/cad_img/thumb_touch_slot_sensor.jpg" />
+                      <img id="img4" style="width:300px;  display: none;" class="img-fluid" src="./static/cad_img/thumb_touch_slot.jpg" /></td>
+                    </td>
+                    <td>
+                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/9ecf3fcf0ca74165aa6f844e25e1a798/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+                    </td>
+                    <td><a href="./static/cad/thumb/thumb_touch_slot.stp">Thumb Touch With Cable Slot STP</a>
+                    <br>
+                    <a href="./static/cad/thumb/thumb_touch_slot.3mf">Thumb Touch With Cable Slot 3MF</a>
+                    <br>
+                    The slot allows for touch sensor cable to pass through.
+                    </td>
+                    <td>
+                    1x  <br>
+                        0.4mm nozzle TPU<br>
+                        0.2mm nozzle PLA </td>
+                    </td>
+                  </tr>
+                      <script>
+                      const img1 = document.getElementById('img1');
+                      const img2 = document.getElementById('img2');
+                      const img3 = document.getElementById('img3');
+                      const img4 = document.getElementById('img4');
+                      let showingFirst = true;
+                      setInterval(() => {
+                          if (showingFirst) {
+                              img1.style.display = 'none';
+                              img2.style.display = 'block';
+                              img3.style.display = 'none';
+                              img4.style.display = 'block';
+                          } else {
+                              img1.style.display = 'block';
+                              img2.style.display = 'none';
+                              img3.style.display = 'block';
+                              img4.style.display = 'none';
+                          }
+                          showingFirst = !showingFirst;
+                      }, 5000); // Switch every 5000ms = 5 seconds
+                    </script>
+                </tbody> 
+              </table>
+            </div>
+            <h3 class="title is-3" style="text-align: center;"><bold>Pulley</bold></h3>  
+            <div class = "row">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th class="col-1">Item</th>
+                    <th class="col-1">Preview</th>
+                    <th class="col-1">Download</th>
+                    <th class="col-1">Instructions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/pulley.jpg" /></td>
+                        <td>
+                          <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/7cef4384d180417eb2dc2c30906a8219/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+                        </td>
+                        <td><a href="./static/cad/pulley/pulley.stp">Pulley STP</a>
+                        <br>
+                        <a href="./static/cad/pulley/pulley.3mf">Pulley 3MF</a>
+                        </td>
+                        <td>
+                        1x <br>
+                        0.2mm Nozzle PLA <br> 100% Infill <br>
+                        Print Slowly (no support)
+                        </td>
+                    </tr>
+                </tbody> 
+              </table>
+            </div>
+            <h3 class="title is-3" style="text-align: center;"><bold>Covers</bold></h3>  
+            <div class = "row">
+                         <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th class="col-1">Item</th>
+                    <th class="col-1">Preview</th>
+                    <th class="col-1">Download</th>
+                    <th class="col-1">Instructions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/palm_cover.jpg" /></td>
+                    <td>
+                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/e751956f56f549dfa0d2f71c453894e6/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+                    </td>
+                    <td><a href="./static/cad/cover/palm_cover.stp">Palm Cover STP</a>
+                    </td>
+                    <td>
+                    1x <br>0.4mm Nozzle PLA <br> 60% Infill 
+                    </td>
+                  </tr>              
+                  <tr>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/finger_cover.jpg" /></td>
+                    <td>
+                      <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/4a7057b5dbd4499e92eab334ed452d04/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+                    </td>
+                    <td><a href="./static/cad/cover/finger_cover.stp">Finger Cover STP</a>
+                    </td>
+                    <td>
+                    1x <br> 0.4mm Nozzle PLA <br> 60% Infill 
+                    </td>
+                  </tr>              
+                </tbody> 
+              </table>
+            </div>
+          
+
+
           </div>
 
           <div class="column is-full-width">
-            <h3 class="title is-3" style="text-align: center;"><bold>PLA Parts</bold></h3>  
+            <h3 class="title is-3" style="text-align: center;"><bold>Mounting Instructions</bold></h3>  
             <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                        Notes:
+                    <h2 class="accordion-header" id="panelsStayOpen-headingSeventyTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeventyTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseSeventyTwo">
+                        Important Hand Mounting Info:
                     </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                    <div class="accordion-body">
-                        <p class="fs-6">Print these PLA parts using any standard printer. I used the Snapmaker J1S with two 0.4mm steel-hardened nozzles (which are less prone to clogging), with the left nozzle filled with <a href="https://a.co/d/iDNecKH">Black Polymaker Pro PLA</a> and the right nozzle loaded with <a href="https://a.co/d/cbVsHUl">dissolvable PVA support.</a></p>
-                    </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingSeventy">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeventy" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeventy">
-                        Important Hand -> Arm Mounting Info:
-                    </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseSeventy" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeventy">
+                    <div id="panelsStayOpen-collapseSeventyTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingSeventyTwo">
                       <div class="accordion-body">
                         <p>
                           You have two mounting options for the hand: an anatomically correct wrist mount or a top mount similar to those used for grippers.
                         </p>
                         <p>
-                          The anatomically correct mount is ideal for humanoid robots but may be less practical for many robotic arms. For example, 6DOF arms like the xArm are optimized for top-down manipulation and typically benefit from gripper-style top mounts, which also enhance overall kinematics.
+                          The anatomically correct mount is ideal for humanoid robots but may be less practical for many robotic arms. For example, 6DOF arms like the xArm or ARX/YAM are optimized for top-down manipulation and typically benefit from gripper-style top mounts.
                         </p>
                         <p>
-                          For 7DOF arms such as the Franka Emika, both mounting options work well depending on your use case.
+                          For 7DOF arms such as the Franka Emika, both mounting options work well.
                         </p>
                         <p>
-                          The top mount also offers extra space for custom electronics. Since the electronics are housed within the mount, we recommend printing one even if you're using the hand without a robot arm.
+                          Since the electronics are housed within the top mount, we recommend printing one even if you're using the hand without a robot arm.
                         </p>
-
-                        <div class="row">
-                          <div class="col">
-                              <img style="width:100%" class="img-fluid" src="./static/assm_img/palm_motors.JPG" onclick="this.requestFullscreen()"/>    
-                              Wrist mount           
-                          </div>  
-                          <div class="col">
-                              <img style="width:100%" class="img-fluid" src="./static/assm_img/palm_motor_screws.JPG" onclick="this.requestFullscreen()"/>
-                              top mount
-                          </div>
-                        </div>
                       </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingonehundredthree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseonehundredthree" aria-expanded="false" aria-controls="panelsStayOpen-collapseonehundredthree">
+                        Top Mount Instructions:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseonehundredthree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingonehundredthree">
+                    <div class="accordion-body">
+                       <div class="row">
+                          <div class="col-md-6">
+                              <p>
+                                Print <strong>1x Top Mount</strong> for your robot arm of choice.  The tall top mounts are necessary if you do not have a <a href="https://github.com/leap-hand/LEAP_Power">LEAP Power Board</a>.<br>
+                                Choose either a left or right mount; <strong>do not mirror</strong> it, or the text will be inverted.
+                              </p>                             
+                              <p>The <strong>Hats</strong> are provided for your convenience:</p>
+                              <ul>
+                                <li>The <strong>0mm Hat</strong> is useful for quickly swapping between arms.</li>
+                                <li>The <strong>10mm+</strong> Hats can house additional electronics such as touch sensors.</li>
+                              </ul>
+                          </div>
+                          <div class="col-md-3">
+                              <img style="width:100%" class="img-fluid" src="./static/assm_img/arx_mount_back.jpg" onclick="this.requestFullscreen()"/>    
+                          </div>  
+                          <div class="col-md-3">
+                              <img style="width:100%" class="img-fluid" src="./static/assm_img/arx_mount_front.jpg" onclick="this.requestFullscreen()"/>    
+                          </div>  
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingonehundredfour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseonehundredfour" aria-expanded="false" aria-controls="panelsStayOpen-collapseonehundredfour">
+                        Wrist Mount Instructions:
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseonehundredfour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingonehundredfour">
+                    <div class="accordion-body">
+                            <p> Print <strong>1x Wrist Mount</strong> for your robot arm of choice. <br>
+                              Choose either a left or right mount; <strong>do not mirror</strong> it, or the text will be inverted.
+                            </p>
+
+                            <p>Now print these covers:</p>
+                            <ul>
+                              <li>1x Wrist Cover (multi-material)</li>
+                              <li>1x USB Board Cover</li>
+                            </ul>
+                          <img style="width:66%" class="img-fluid" src="./static/assm_img/wrist_mount.jpg" onclick="this.requestFullscreen()"/>
+                    </div>
+                    </div>
+                       
+                  </div>
             </div>
+          </div>
+            <br><br>
+            <h3 class="title is-3" style="text-align: center;"><bold>Top Mount</bold></h3>
+            <h5 class="title is-5" style="text-align: center;">Pick one Mount, Hats are optional</h5>
+            <h5 class="title is-5" style="text-align: center;">xArm/Franka/UR5/<a href="https://i2rt.com/products/yam-manipulator">YAM</a>/<a href="https://global.agilex.ai/products/piper">Piper</a></h5>
             <div class = "row">
               <table class="table table-striped">
                 <thead>
@@ -549,55 +938,157 @@
                     <th class="col-1">Item</th>
                     <th class="col-1">Preview</th>
                     <th class="col-1">Download</th>
-                    <th class="col-1">Quantity</th>
+                    <th class="col-1">Instructions</th>
                   </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/4_fingers_bottom.JPG" /></td>
-                        <td><div class="sketchfab-embed-wrapper"> <iframe title="Palm Upper No Holes" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/e9eee3ec8e914c1580aa9058c25d8e3b/embed?autospin=1&autostart=0&camera=0"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/palm-upper-no-holes-28b1329bf43e47daad2ea33bd7c5dd48?utm_medium=embed&utm_campaign=share-popup&utm_content=28b1329bf43e47daad2ea33bd7c5dd48" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"></a></p></div>
+                        <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/top_mount.jpg" /></td>
+                        <td><div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share  src="https://sketchfab.com/models/63d7243dab1249228ddebe446d9588b1/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
                         </td>
-                        <td><a href="./static/cad/pla_parts/4fingers_bottom_right.stp">4 Fingers Bottom Right STP</a><br>
-                            <a href="./static/cad/pla_parts/4fingers_bottom_left.stp">4 Fingers Bottom Left STP</a><br>
-                            (Print 40% Infill)      
+                        <td>
+                            <a href="./static/cad/top_mount/top_mount_right.stp">Top Mount Right STP</a><br>
+                            <a href="./static/cad/top_mount/top_mount_left.stp">Top Mount Left STP</a><br>                                  
                         </td>
-                        <td>1</td>
+                        <td>1x <br>0.4mm Nozzle PLA <br> 60% Infill</td>
+                    </tr>    
+                    <tr>
+                        <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/top_mount_tall.jpg" /></td>
+                        <td><div class="sketchfab-embed-wrapper"> <iframe title="Palm Upper No Holes" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8ec3039d4f114b97b3660de501a69ac3/embed?autospin=1&autostart=0&camera=0"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/palm-upper-no-holes-28b1329bf43e47daad2ea33bd7c5dd48?utm_medium=embed&utm_campaign=share-popup&utm_content=28b1329bf43e47daad2ea33bd7c5dd48" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"></a></p></div>
+                        </td>
+                        <td>
+                            <a href="./static/cad/top_mount/top_mount_tall_right.stp">Top Mount Tall Right STP</a><br>
+                            <a href="./static/cad/top_mount/top_mount_tall_left.stp">Top Mount Tall Left STP</a><br>                                  
+                        </td>
+                        <td>1x <br>0.4mm Nozzle PLA <br> 60% Infill<br><br> (Tall has more space for cables if not using <a href="https://github.com/leap-hand/LEAP_Power">LEAP Power Board)</a></td>
+                    </tr>     
+                  <tr>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/0mm_hat.jpg" /></td>
+                    <td><div class="sketchfab-embed-wrapper"> <iframe title="Palm Upper No Holes" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/21d240cd27514b529d61c04092ea868f/embed?autospin=1&autostart=0&camera=0"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/palm-upper-no-holes-28b1329bf43e47daad2ea33bd7c5dd48?utm_medium=embed&utm_campaign=share-popup&utm_content=28b1329bf43e47daad2ea33bd7c5dd48" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"></a></p></div>
+                    </td>
+                    <td><a href="./static/cad/top_mount/0mm_hat.stp">0mm Hat STP<br></a><br>
+                    </td>
+                    <td>1x <br>0.4mm Nozzle PLA <br> 60% Infill</td>
+                  </tr> 
+                  <tr>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/20mm_hat.jpg" /></td>
+                    <td><div class="sketchfab-embed-wrapper"> <iframe title="Palm Upper No Holes" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/5e687fb512a542179962d4770500bf91/embed?autospin=1&autostart=0&camera=0"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/palm-upper-no-holes-28b1329bf43e47daad2ea33bd7c5dd48?utm_medium=embed&utm_campaign=share-popup&utm_content=28b1329bf43e47daad2ea33bd7c5dd48" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"></a></p></div>
+                    </td>
+                    <td><a href="./static/cad/top_mount/20mm_hat.stp">20mm Hat STP</a><br> 
+                    </td>
+                    <td>1x <br>0.4mm Nozzle PLA <br> 60% Infill<br><br> (Useful for touch sensors)</td>
+                  </tr> 
+                </tbody>
+              </table>
+            </div>
+
+             <h5 class="title is-5" style="text-align: center;">Blank Mounting Plate</h5>
+            <div class = "row">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <!-- <th data-width="100">Item</th> -->
+                    <th class="col-1">Item</th>
+                    <th class="col-1">Preview</th>
+                    <th class="col-1">Download</th>
+                    <th class="col-1">Instructions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/blank_top_mount.jpg" /></td>
+                        <td>
+                                <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/be2c8d91edd643968834bfd122a9e624/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+
+                        </td>
+                        <td>
+                            <a href="./static/cad/top_mount_blank/top_mount_blank_right.stp">Top Mount Blank Right STP</a><br>
+                            <a href="./static/cad/top_mount_blank/top_mount_blank_left.stp">Top Mount Blank Left STP</a><br>                                  
+                        </td>
+                        <td>1x <br>0.4mm Nozzle PLA <br> 60% Infill</td>
+                    </tr>    
+                    <tr>
+                        <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/blank_top_mount_tall.jpg" /></td>
+                        <td>
+                              <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/9936a28f0a524aee8aae2aaed1b14466/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+
+                        </td>
+                        <td>
+                            <a href="./static/cad/top_mount_blank/top_mount_tall_blank_right.stp">Top Mount Blank Tall Right STP</a><br>
+                            <a href="./static/cad/top_mount_blank/top_mount_tall_blank_left.stp">Top Mount Blank Tall Left STP</a><br>                                  
+                        </td>
+                        <td>1x <br>0.4mm Nozzle PLA <br> 60% Infill<br><br> (Tall has more space for cables if not using <a href="https://github.com/leap-hand/LEAP_Power">LEAP Power Board)</a></td>
+                    </tr>     
+                  <tr>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/blank_0mm_hat.jpg" /></td>
+                    <td>
+                          <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/cc2199ec00c845d996ce284646f53f7d/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+
+                    </td>
+                    <td><a href="./static/cad/top_mount_blank/blank_0mm_hat.stp">Blank 0mm Hat STP<br></a><br>
+                    </td>
+                    <td>1x <br>0.4mm Nozzle PLA <br> 60% Infill</td>
+                  </tr> 
+                  <tr>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/blank_20mm_hat.jpg" /></td>
+                    <td>
+                        <div class="sketchfab-embed-wrapper"> <iframe title="Finger Tip" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/c5fa3cabb0d6429794d57f6fc834485b/embed?autospin=1&autostart=0&camera=0"> </iframe></div>
+
+                    </td>
+                    <td><a href="./static/cad/top_mount_blank/blank_20mm_hat.stp">Blank 20mm Hat STP</a><br> 
+                    </td>
+                    <td>1x <br>0.4mm Nozzle PLA <br> 60% Infill<br><br> (Useful for touch sensors)</td>
+                  </tr> 
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="title is-3" style="text-align: center;"><bold>Wrist Mount</bold></h3>  
+            <h5 class="title is-5" style="text-align: center;">Only recommended on xArm7/Franka due to arm kinematics</h5>
+            <div class = "row">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <!-- <th data-width="100">Item</th> -->
+                    <th class="col-1">Item</th>
+                    <th class="col-1">Preview</th>
+                    <th class="col-1">Download</th>
+                    <th class="col-1">Instructions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/wrist_mount.jpg" /> 
+</td>
+                        <td><div class="sketchfab-embed-wrapper"> <iframe title="Palm Upper No Holes" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/4e3262995f7a4f2a8a3d7a2c95bb5327/embed?autospin=1&autostart=0&camera=0"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/palm-upper-no-holes-28b1329bf43e47daad2ea33bd7c5dd48?utm_medium=embed&utm_campaign=share-popup&utm_content=28b1329bf43e47daad2ea33bd7c5dd48" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"></a></p></div>
+                        </td>
+                        <td>
+                            <a href="./static/cad/wrist_mount/wrist_mount_right.stp">Wrist Mount Right STP</a><br>
+                            <a href="./static/cad/wrist_mount/wrist_mount_left.stp">Wrist Mount Left STP</a>
+                            <br><br> 
+                            <a href="./static/cad/wrist_mount/wrist_mount_right_blank.stp">Wrist Mount Right STP (Blank)</a><br>
+                            <a href="./static/cad/wrist_mount/wrist_mount_left_blank.stp">Wrist Mount Left STP (Blank)</a><br><br>   
+                        </td>
+                        <td>1x <br>0.4mm Nozzle PLA <br> 60% Infill <br> Do not mirror it or the text will be reversed.</td>
                     </tr> 
                   <tr>
-                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/pulley.JPG" /></td>
-                    <td><div class="sketchfab-embed-wrapper"> <iframe title="Palm Upper No Holes" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b9a1db35a3084c5e9fef76442ec811cb/embed?autospin=1&autostart=0&camera=0"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/palm-upper-no-holes-28b1329bf43e47daad2ea33bd7c5dd48?utm_medium=embed&utm_campaign=share-popup&utm_content=28b1329bf43e47daad2ea33bd7c5dd48" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"></a></p></div>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/wrist_cover.jpg" /></td>
+                    <td><div class="sketchfab-embed-wrapper"> <iframe title="Palm Upper No Holes" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/59fb953044564d94a706e6fa867a6df1/embed?autospin=1&autostart=0&camera=0"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/palm-upper-no-holes-28b1329bf43e47daad2ea33bd7c5dd48?utm_medium=embed&utm_campaign=share-popup&utm_content=28b1329bf43e47daad2ea33bd7c5dd48" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"></a></p></div>
                     </td>
-                    <td><a href="./static/cad/pla_parts/pulley.stp">Pulley STP</a><br>
-                        (Print 100% Infill)      
+                    <td><a href="./static/cad/wrist_mount/wrist_cover.stp">Wrist Cover STP</a><br>
+                    <a href="./static/cad/wrist_mount/wrist_cover.3mf">Wrist Cover 3MF</a><br>
                     </td>
-                    <td>5</td>
-                  </tr>         
+                    <td>1x <br>
+                        0.4mm nozzle TPU<br>
+                        0.2mm nozzle PLA </td>
+                  </tr>                 
                   <tr>
-                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/xarm_mount.JPG" /></td>
-                    <td><div class="sketchfab-embed-wrapper"> <iframe title="Palm Upper No Holes" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/6812d68de97a412aa344e8930ba82a39/embed?autospin=1&autostart=0&camera=0"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/palm-upper-no-holes-28b1329bf43e47daad2ea33bd7c5dd48?utm_medium=embed&utm_campaign=share-popup&utm_content=28b1329bf43e47daad2ea33bd7c5dd48" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"></a></p></div>
+                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/usb_board.jpg" /></td>
+                    <td><div class="sketchfab-embed-wrapper"> <iframe title="Palm Upper No Holes" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/1c0d81718ceb4e6491ad130f697d3f5d/embed?autospin=1&autostart=0&camera=0"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/palm-upper-no-holes-28b1329bf43e47daad2ea33bd7c5dd48?utm_medium=embed&utm_campaign=share-popup&utm_content=28b1329bf43e47daad2ea33bd7c5dd48" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"></a></p></div>
                     </td>
-                    <td><a href="./static/cad/pla_parts/4_fingers_mount.stp">4 Fingers Mount STP<br>(xArm/Franka/UR5)</a><br>
-                        (Print 60% Infill)      
+                    <td><a href="./static/cad/wrist_mount/usb_board_cover.stp">USB Board Cover STP</a><br>
                     </td>
-                    <td>1</td>
-                  </tr> 
-                  <tr>
-                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/no_fingers_mount.JPG" /></td>
-                    <td><div class="sketchfab-embed-wrapper"> <iframe title="Palm Upper No Holes" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/db442dea8a59454db0ed62c00acb7efe/embed?autospin=1&autostart=0&camera=0"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/palm-upper-no-holes-28b1329bf43e47daad2ea33bd7c5dd48?utm_medium=embed&utm_campaign=share-popup&utm_content=28b1329bf43e47daad2ea33bd7c5dd48" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"></a></p></div>
-                    </td>
-                    <td><a href="./static/cad/pla_parts/no_fingers_mount.stp">No Fingers Mount STP<br>(xArm/Franka/UR5)</a><br> While anatomically correct, I do not recommend it due to the strain on the palm motor and the weaker mounting.  
-                        (Print 80% Infill)      
-                    </td>
-                    <td>1 <br> (Alternate to 4 Finger Mount)</td>
-                  </tr> 
-                  <tr>
-                    <td><img style="width:300px;" class="img-fluid" src="./static/cad_img/u2d2_holder.JPG" /></td>
-                    <td><div class="sketchfab-embed-wrapper"> <iframe title="Palm Upper No Holes" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/ef118d5ecd3748579ed9e2ff599f5017/embed?autospin=1&autostart=0&camera=0"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/palm-upper-no-holes-28b1329bf43e47daad2ea33bd7c5dd48?utm_medium=embed&utm_campaign=share-popup&utm_content=28b1329bf43e47daad2ea33bd7c5dd48" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"></a></p></div>
-                    </td>
-                    <td><a href="./static/cad/pla_parts/u2d2_holder.stp">U2D2 Holder STP</a><br>
-                        (Print 60% Infill)      
-                    </td>
-                    <td>1</td>
+                    <td>1x <br>0.4mm Nozzle PLA <br> 60% Infill <br>Do not mirror for left hand.</td>
                   </tr> 
                 </tbody>
               </table>
